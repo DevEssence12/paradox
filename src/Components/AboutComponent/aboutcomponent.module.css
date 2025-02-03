@@ -1,0 +1,162 @@
+/* General container styles */
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  overflow: hidden;
+  flex-wrap: wrap; /* Ensures content doesn't overflow */
+}
+
+/* Content section */
+.content {
+  flex: 1;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1.2s ease-out forwards;
+}
+
+.imageContainer {
+  position: relative;
+  height: 30rem;
+  width: auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1.2s ease-out forwards;
+}
+
+/* Image styles */
+.aboutImage {
+  height: 100%;
+  width: 100%;
+  max-width: auto;
+  border-radius: 10px;
+/*   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+/*   transition: transform 0.3s ease; */
+}
+
+.imageZoom:hover {
+  transform: scale(1.1);
+}
+
+/* Text styles */
+.subHeading {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #7f8c8d;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Button styles */
+.readMoreButton {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.scaleOnHover:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column; /* Stack content vertically */
+    gap: 1rem;
+  }
+
+  .content {
+    text-align: center; /* Center-align the text */
+    transform: translateX(0); /* Reset animation direction */
+    animation: fadeInUp 1.2s ease-out forwards; /* Optional: New fade-in animation */
+  }
+
+  .imageContainer {
+    width: auto;
+    height: 20rem; /* Adjust height for smaller screens */
+    transform: translateX(0); /* Reset animation direction */
+    animation: fadeInUp 1.2s ease-out forwards; /* Optional: New fade-in animation */
+  }
+
+  .aboutImage {
+    width: 90%; /* Shrink the image width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .heading {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+  .readMoreButton {
+    padding: 0.6rem 1.5rem; /* Adjust button size */
+    font-size: 0.9rem;
+  }
+}
+
+/* Optional animation for stacking effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

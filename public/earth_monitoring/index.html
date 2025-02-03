@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <title>Earthing Quality Monitor</title>
+</head>
+
+<body>
+    <div id="home" class="video-container">
+        <video id="home" autoplay muted playsinline class="background-video">
+            <source src="clip.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <div id="imageSlider" class="image-container" style="display:none">
+        <img src="im1.png" class="slideshow-image fade-in" id="slideshowImage" alt="Transition Image">
+        <div class="gradient-overlay"></div>
+        <div class="overlay-text" style="z-index: 2; position: absolute;">
+            <h1>Earthing Quality Monitoring System</h1>
+        </div>
+    </div>
+
+    <div class="background-animation"></div>
+    <header>
+        <h1 class="header-title">Earthing Quality Monitoring System</h1>
+    </header>
+    <main>
+        <section class="info-section">
+            <h2 style="color: rgb(255, 255, 255);">What is Earthing Quality Monitoring?</h2>
+            <br><br>
+            <p style="color:#665b5b;">Monitoring the quality of earthing is crucial for safety and efficiency. Our
+                system provides real-time updates and alerts.</p>
+            <div class="features">
+                <div class="feature-card">
+                    <h3 class="feature-title">Real-Time Monitoring</h3>
+                    <p class="feature-description">Get live updates on earthing conditions directly to your device.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Alerts & Notifications</h3>
+                    <p class="feature-description">Receive instant alerts for any irregularities in earthing quality.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">User-Friendly Interface</h3>
+                    <p class="feature-description">Navigate our system with ease and access critical information effortlessly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section" style="color: aliceblue;">
+            <h2 style="font-size: 30px;">About Paradox Innovator </h2><br><hr>
+            <br><br>
+            <p style="color: #665b5b;">At Paradox Innovator, we are dedicated to creating innovative solutions that
+                enhance safety and efficiency in various sectors. Our team of engineers and designers works tirelessly to develop
+                cutting-edge technology that meets the needs of our community.</p>
+            <br><br>
+            <div class="team-section" style="color: aliceblue;">
+                <h3><u style="font-size: 30px;">Our Team</u></h3>
+                <br><br>
+                <p style="color: #665b5b;">We have a diverse team of passionate individuals who specialize in robotics,
+                    engineering, and design. Together, we strive to make a difference through our projects.</p>
+                <p style="color: #665b5b;">We are Paradox Innovator, a team of 6 innovators that aim to build future.
+                    Paradox Innovator focuses on different innovative projects or ideas to compete in the same or
+                    different competitions and life changing innovations. Paradox Innovator is a group comprising 6 members.
+                    Everyone has their own tasks. Anshu, Ranjan and Ankit takes care of the hardware part. Anshu creates innovative 
+                    projects to make lifestyle easier and help mankind. Ranjan and Ankit specializes in creating competitive bots 
+                    like line followers, sand rovers, and more. Ankit creates schematic diagrams and records vlogs for YouTube. 
+                    Shreya handles complete documentation, including Excel sheets, Word files, and PowerPoint presentations. 
+                    She researches competition details, manages expenses, prepares reports, creates presentations, and handles 
+                    all necessary documents. Additionally, she edits videos for YouTube, manages YouTube and Instagram accounts. 
+                    Swayam handles business pitches and fits our projects for business prospects. Shreya also assists with market research.
+                    Do follow the page for future updates. We are committed to provide your all college project help and guide. 
+                    Do contact at info.paradoxinnovator@gmail.com</p>
+            </div>
+            <br><br>
+            <div style="display: flex; padding: 20px 200px; justify-content: space-between;">
+                <img src="anshu.png" alt="Anshu Raj"
+                    style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                <img src="ranjan.jpg" alt="Ranjan"
+                    style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                <img src="ankit.jpg" alt="Ankit Pandit"
+                    style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                <img src="shreya.jpg" alt="Shreya Panda"
+                    style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                <img src="swayam.jpg" alt="Swayam Mishra"
+                    style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+            </div>
+            <div style="display: flex; padding: 0 215px; justify-content: space-between; width: 100%;">
+                <div>Anshu Raj</div>
+                <div>Ranjan Kr. Gupta</div>
+                <div>Ankit Pandit</div>
+                <div>Shreya Panda</div>
+                <div>Swayam Mishra</div>
+            </div>
+        </section>
+
+        <section id="Achievements" class="achievements" style="color: aliceblue;">
+            <h2>Achievements</h2><br><hr>
+            <br><br>
+            <div id="achievements" class="achievements"
+                style="display: flex; padding: 0 120px; justify-content: space-between; ">
+                <div><img id="achievement1" src="image1.png" alt="Paradox innovator"></div>
+                <div><img id="achievement2" src="image3.png" alt="Paradox innovator"></div>
+            </div>
+            <div  style="display: flex; padding: 0 9%; justify-content: space-between; width: 100%;">
+                <div><u>Hack Heritage 2024</u>
+                    <p style="color: rgb(255, 255, 255);">Winner among 250+ teams of Hack Heritage,<br> An internal
+                        Hackathon for SIH24.
+                    </p>
+                </div>
+                <div><u>NIRMITI 2024</u>
+                    <p style="color: rgb(255, 255, 255);">Winner among 60+ Startups among the city,<br> Tier 2 TRL 4
+                        Service products .</p>
+                </div>
+            </div>
+        </section>
+        <br><br><h2 style="font-size: 30px; align-content: center;"> User Reviews</h2><br><hr>
+        <section class="reviews-section">
+            <br><br>
+            <div class="review">
+                <blockquote>"This system has greatly improved our safety standards!"</blockquote>
+                <cite>- Adarsh singh</cite>
+            </div>
+            <div class="review">
+                <blockquote>"I love the real-time monitoring features!"</blockquote>
+                <cite>- Priya Sharma</cite>
+            </div>
+            <div class="review">
+                <blockquote>"A user-friendly interface that makes monitoring easy."</blockquote>
+                <cite>- Ravi Kumar</cite>
+            </div>
+        </section>
+        <br><br>
+        <section class="location-section">
+            <i class="fas fa-map-marker-alt location-icon">Location of Paradox Innovator</i>
+            <br><br>
+            <p>We are located at:</p>
+            <p>8/8 kalitala link road, Kalikapur, Kolkata , West Bengal - India </p>
+            <br>
+            <div class="map"></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=22.507371,88.396800" target="_blank">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.36966505329386!2d88.39678227591959!3d22.507385568224247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027186f9ab4c8b%3A0x2fb635b6f6ac1c30!2sBulon&#39;s%20flat!5e0!3m2!1sen!2sin!4v1730447605691!5m2!1sen!2sin"
+                    width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </a>
+        </section>
+        <br><br>
+        <section id="contact" class="query-section">
+            <h1>Have a Question? Let Us Know!</h1>
+            <input type="text" id="name2" name="Name" class="input-field" placeholder="Your Name" required>
+            <input type="email" id="email2" name="Email" class="input-field" placeholder="Your Email" required>
+            <input type="number" id="mob2" name="Mobile" class="input-field" placeholder="Your Mobile number" required>
+            <textarea id="queryBox2" name="Contact-us" class="query-box"
+                placeholder="Enter your Question here..."></textarea>
+            <br>
+            <div id="spinner-container2">
+                <div id="spinner2"></div>
+            </div>
+            <button id="submit-query" class="submit-query">Submit</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <h3>Contact Us</h3>
+        <div class="links">
+            <div>
+                <div class="item"><a href="https://www.instagram.com/paradoxinnovator/" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>Paradox Inovator
+                    </a>
+                </div>
+                <div class="item"><a href="https://www.youtube.com/@ParadoxInnovator" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>Paradox Inovator
+                    </a>
+                </div>
+                <div class="item"><a href="mailto:info.paradoxinnovator@gmail.com" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>Paradox Inovator
+                    </a>
+                </div>
+                <div class="item"><a href="https://www.github.com/Paradox-Innovator-Group" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>Paradox Inovator
+                    </a>
+                </div>
+            </div>
+            <div>
+                <p>All Rights Reserved | © Paradox Innovator Group | 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

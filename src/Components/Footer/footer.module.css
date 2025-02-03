@@ -1,0 +1,238 @@
+.footer {
+    --footer-bg: #f8f9fa;
+    --footer-text: #9f9fa5;
+    --footer-link: #4a5568;
+    --footer-link-hover: #0066ff;
+    --footer-border: #e2e8f0;
+    --bottom-bar-bg: #ffffff;
+    background-image: url("https://i.ibb.co/D9K9gLx/Whats-App-Image-2025-01-23-at-10-15-49.jpg");
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding-top: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 4rem;
+  }
+  
+  .brandSection {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .logoContainer {
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo {
+    height: 9rem;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .brandDescription {
+    color: var(--footer-text);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .linksContainer {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 2rem;
+  }
+  
+  .linkSection {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .linkTitle {
+    color: var(--footer-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .linkTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 30px;
+    height: 2px;
+    background-color: var(--footer-link-hover);
+  }
+  
+  .linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .linkList li {
+    margin-bottom: 0.8rem;
+  }
+  .privacy
+  {
+    padding-left: 6rem;
+    color:#bfcfe2;
+  }
+  .link {
+    color:#8e9297;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--footer-link-hover);
+    transition: width 0.3s ease;
+  }
+  
+  .link:hover {
+    color: var(--footer-link-hover);
+  }
+  
+  .link:hover::after {
+    width: 100%;
+  }
+  
+  .socialLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .socialLink {
+    color:#8e9297;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .socialLink:hover {
+    color: var(--footer-link-hover);
+    transform: translateX(5px);
+  }
+  
+  .icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.2rem;
+  }
+  
+  .bottomBar {
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    justify-items: center;
+  }
+  
+  .copyright {
+    color:#8e9297;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .legal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .legalLink {
+    color: var(--footer-link);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .legalLink:hover {
+    color: var(--footer-link-hover);
+  }
+  
+  .divider {
+    color: var(--footer-border);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .footerContent {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .brandSection {
+      max-width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footerContent {
+      padding: 0 1.5rem;
+    }
+  
+    .linksContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .bottomContent {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .linksContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .legal {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .divider {
+      display: none;
+    }
+  }
+  
+  /* Animation for links */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .linkSection {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .linkSection:nth-child(1) { animation-delay: 0.1s; }
+  .linkSection:nth-child(2) { animation-delay: 0.2s; }
+  .linkSection:nth-child(3) { animation-delay: 0.3s; }

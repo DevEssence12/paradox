@@ -1,0 +1,54 @@
+.sustainableGoalsSection {
+    position: relative;
+    height: 60vh;
+    width: auto;
+    background-image: url('https://i.ibb.co/4fTjh6J/Turn-Your-1.png');
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .para{
+    font-size: 18px;
+  }
+  .overlay {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    padding: 2rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    border-radius: 12px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  
+  .ctaButton {
+    display: inline-block;
+    background-color: #00c853;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .ctaButton:hover {
+    background-color: #009624;
+  }
+  

@@ -1,0 +1,199 @@
+.pageContainer {
+    margin-top: 5rem;
+    font-family: "Arial", sans-serif;
+    color: #333;
+    padding: 20px;
+    background: linear-gradient(120deg, #f0f4f8, #ffffff);
+  }
+
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 60px 20px;
+    background-image: url("https://i.ibb.co/7p2LrcR/6.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease;
+  }
+.imageContainer {
+  position: relative;
+  height: 30rem;
+  width: auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1.2s ease-out forwards;
+}
+
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+
+.heading {
+  padding-top: 9rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: clamp(1rem, 3vw, 1.125rem);
+  line-height: 1.6;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subheading {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.serviceList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.service {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.service h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.service ul, 
+.industries ul, 
+.whyChoose ul, 
+.process ol, 
+.studentSupport ul, 
+.successStories ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.service ul li,
+.industries ul li, 
+.whyChoose ul li, 
+.process ol li, 
+.studentSupport ul li, 
+.successStories ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.service ul li::before,
+.industries ul li::before, 
+.whyChoose ul li::before, 
+.process ol li::before, 
+.studentSupport ul li::before, 
+.successStories ul li::before {
+  content: '•';
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+.process ol {
+  counter-reset: process-counter;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.process ol li {
+  counter-increment: process-counter;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.process ol li::before {
+  content: counter(process-counter) '.';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.contact {
+  text-align: center;
+  background-color: #3498db;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .serviceList {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .service {
+    padding: 1rem;
+  }
+
+  .service h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    padding: 1rem 0;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
