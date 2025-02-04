@@ -1,35 +1,24 @@
 .pageContainer {
-  margin-top: 6rem;
+  margin-top: 5rem;
   font-family: "Arial", sans-serif;
   color: #333;
   background: linear-gradient(120deg, #f0f4f8, #ffffff);
   overflow-x: hidden;
+  padding: 0 1rem;
+  perspective: 1000px;
 }
 
 .hero {
-  position: relative;
   text-align: center;
   margin-bottom: 50px;
-  padding: 120px 20px;
-  background-image: url("https://i.ibb.co/pjBtY0hF/Turn-Your.png");
+  padding: 60px 20px;
+  background-image: url("https://i.ibb.co/7p2LrcR/6.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   border-radius: 8px;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
-  z-index: 1;
 }
 
 .title {
@@ -39,7 +28,49 @@
   z-index: 2;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 1s ease forwards, glowText 2s ease-in-out infinite;
+}
+
+.imageSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 2rem;
+  margin: 4rem auto;
+  max-width: 1200px;
+}
+
+.imageContainer {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-30px) rotateY(-10deg);
+  animation: fadeInRight 1s ease forwards 0.3s;
+  transition: transform 0.5s ease;
+}
+
+.imageContainer:hover {
+  transform: rotateY(5deg) scale(1.02);
+}
+
+.imageContent {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInLeft 1s ease forwards 0.3s;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+  transition: all 0.5s ease;
+}
+
+.image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(52, 152, 219, 0.3);
 }
 
 .intro {
@@ -84,12 +115,34 @@
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  position: relative;
+  overflow: hidden;
+  animation: cardAppear 0.6s ease forwards;
+  animation-delay: calc(var(--card-index) * 0.1s);
+  opacity: 0;
+}
+
+.service::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
 }
 
 .service:hover {
-  transform: translateY(-15px);
+  transform: translateY(-15px) scale(1.02);
   box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+}
+
+.service:hover::before {
+  transform: scaleX(1);
 }
 
 .service h3 {
@@ -98,6 +151,28 @@
   margin-bottom: 1.5rem;
   border-bottom: 3px solid #3498db;
   padding-bottom: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.service h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  transition: transform 0.4s ease;
+  animation: borderSlide 2s ease infinite;
+}
+
+.service ul,
+.technologies ul,
+.applications ul,
+.whyChoose ul {
+  list-style: none;
+  padding: 0;
 }
 
 .service ul li,
@@ -108,6 +183,10 @@
   padding-left: 1.8rem;
   margin-bottom: 1rem;
   line-height: 1.6;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInLeft 0.5s ease forwards;
+  animation-delay: calc(var(--item-index) * 0.1s);
 }
 
 .service ul li::before,
@@ -119,6 +198,15 @@
   position: absolute;
   left: 0;
   font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.service ul li:hover,
+.technologies ul li:hover,
+.applications ul li:hover,
+.whyChoose ul li:hover {
+  transform: translateX(10px);
+  color: #3498db;
 }
 
 .technologies,
@@ -129,33 +217,9 @@
   margin: 4rem 0;
   border-radius: 15px;
   opacity: 0;
-  animation: fadeIn 1s ease forwards 1s;
-}
-
-.technologies ul,
-.applications ul,
-.whyChoose ul {
-  max-width: 800px;
-  margin: 0 auto;
-  list-style: none;
-  padding: 0;
-}
-
-.technologies ul li,
-.applications ul li,
-.whyChoose ul li {
-  background: white;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem 2rem 1.5rem 4rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.technologies ul li:hover,
-.applications ul li:hover,
-.whyChoose ul li:hover {
-  transform: translateX(10px);
+  animation: slideUp 1s ease forwards;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(50px);
 }
 
 .contact {
@@ -167,7 +231,13 @@
   margin: 4rem auto;
   max-width: 1000px;
   opacity: 0;
-  animation: fadeIn 1s ease forwards 1.2s;
+  animation: fadeIn 1s ease forwards 1.2s, gradientShift 15s ease infinite;
+  box-shadow: 0 15px 40px rgba(52, 152, 219, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.contact:hover {
+  transform: translateY(-10px);
 }
 
 @keyframes fadeInUp {
@@ -190,9 +260,96 @@
   }
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) rotateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes borderSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    text-shadow: 2px 2px 15px rgba(52, 152, 219, 0.8);
+  }
+  100% {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .title {
     font-size: 2.5rem;
+  }
+  
+  .imageSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .imageContainer,
+  .imageContent {
+    width: 100%;
   }
   
   .serviceList {
