@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signincss.css">
+    <title>Sign In</title>
+
+</head>
+<body style="background: transparent;">
+    <!-- Add spinner and login response elements -->
+    <div id="spinner" style="display: none;"></div>
+    <div id="loginResponse" style="display: none;"></div>
+    <div id="fill" style="display: none;"></div>
+    
+    <div class="container">
+        <div class="form-section">
+            <h1>Sign In</h1>
+            <p class="subtitle">If you don't have an account register</p>
+            <p class="subtitle">You can <a href="enquiryhtml.html" class="register-link" target="_blank" onclick="if(window.parent) window.parent.closeSignInPopup();">Register here !</a></p>
+            <form id="signInForm" onsubmit="return validateSignIn(event)">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your Username">
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <span id="password-toggle" class="password-toggle">👁️</span>
+                    </div>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        Remember me
+                    </label>
+                    <a href="forgothtml.html" class="forgot-password" onclick="window.parent.location.href=this.href; return false;">Forgot Password?</a>
+                </div>
+                <button type="button" class="button buttonloading" onclick="validateSignIn(event)">
+                    <span class="buttonText">Sign In</span>
+                </button>
+            </form>
+        </div>
+        
+        <div class="illustration-section">
+            <img src="https://i.postimg.cc/htgSDY1Z/login.png" alt="Sign In Illustration">
+            <h2>Sign into your Account</h2>
+            <p>Welcome Back!</p>
+        </div>
+    </div>
+    <script src="sign.js"></script>
+</body>
+</html>

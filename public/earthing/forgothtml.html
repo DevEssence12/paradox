@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgotcss.css">
+    <title>Forgot Password</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-section">
+            <h1>Forgot Password</h1>
+            <p class="subtitle">Try to keep Username same, if remembered</p>
+            <p class="subtitle">You can <a href="signinhtml.html" class="login-link">Sign In here !</a></p>
+            
+            <form id="forgotForm" onsubmit="return validateForm(event)">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your User name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="mobile">Mobile No.</label>
+                    <input type="number" id="mobile" placeholder="Enter your Mobile No." required>
+                </div>
+
+                <div class="input-group">
+                    <label for="remarks">Remarks</label>
+                    <input type="text" id="remarks" placeholder="Enter Remarks" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="illustration-section">
+            <img src="https://i.postimg.cc/k4w5NSv7/3275434-removebg-preview.png" alt="Forgot Password Illustration">
+            <h2>Forgot Password?</h2>
+            <p>We will update you.</p>
+        </div>
+    </div>
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Get all input values
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+            const mobile = document.getElementById('mobile').value;
+            const remarks = document.getElementById('remarks').value;
+
+            // Email validation using regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+            // Username validation (at least 3 characters)
+            if (username.length < 3) {
+                alert('Username must be at least 3 characters long');
+                return false;
+            }
+
+            // Mobile number validation (10 digits)
+            if (!/^\d{10}$/.test(mobile)) {
+                alert('Please enter a valid 10-digit mobile number');
+                return false;
+            }
+
+            // Remarks validation (not empty and at least 5 characters)
+            if (remarks.length < 5) {
+                alert('Please enter remarks with at least 5 characters');
+                return false;
+            }
+
+            // If all validations pass
+            alert('Your credentials are updated');
+            // Redirect to selectzonehtml file
+            window.location.href = 'final.html';
+            return true;
+        }
+    </script>
+</body>
+</html>

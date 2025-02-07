@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earthing Quality Monitor</title>
+  <link rel="stylesheet" href="updatesStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="updatescontainer">
+        <a href="#" class="nav-logo">
+          <img src="https://i.ibb.co/x3x4byM/logo-removebg-preview.png" alt="Paradox Innovator Logo" class="logo-image">
+        </a>
+        
+        <div class="mobile-controls">
+          <!-- Mobile Search Icon -->
+          <i class="fas fa-search mobile-search-icon" id="mobileSearchIcon"></i>
+          
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu">
+          <div class="nav-close">×</div>
+          <ul>
+            <li><a href="final.html" onclick="return confirmNavigation(event)">Home</a></li>
+            <li><a href="#footer">Contact</a></li>
+            <li><a href="#" id="LO">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Search Container -->
+    <div class="mobile-search" id="mobileSearch">
+      <input type="text" id="mobileSearchInput" placeholder="Search pole ID...">
+      <button id="clearMobileSearchButton" onclick="clearMobileSearchButton()">
+        <i class="fas fa-times"></i>
+      </button>
+      <button id="mobileSearchButton" onclick="mobileSearchPoles()">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="RTDBtitle-container">
+    <h1 class="RTDBtitle">Real-Time Database</h1>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Search Pole ID" oninput="toggleClearButton()">
+      <button id="clearSearchButton" onclick="clearSearch()">
+          <i class="fas fa-times"></i>
+      </button>
+      <button id="searchButton">
+          <i class="fas fa-search"></i> Search
+      </button>
+  </div>
+  </div>
+  <div class="container" id="buttonContainer">
+    <!-- Buttons will be added here dynamically -->
+  </div>
+  <div id="popupContent">
+    <div class="popup" id="POP" style="position: absolute; display: none;">
+      
+      <div id="parameters" class="parameterBox">
+        <div id="close"><i class="fas fa-times"></i></div>
+        <div id="poleIdDisplay" class="pole-id-display">Pole ID: Loading...</div>
+        
+        <div class="parameter-row">
+          <span class="parameter-label"><i class="fas fa-bolt"></i> Voltage between Line & Neutral</span>
+          <span class="parameter-value" id="vln">Fetching Data...</span>
+        </div>
+        
+        <div class="parameter-row">
+          <span class="parameter-label"><i class="fas fa-plug"></i> Voltage between Earth & Neutral</span>
+          <span class="parameter-value" id="ven">Fetching Data...</span>
+        </div>
+        
+        <div class="parameter-row">
+          <span class="parameter-label"><i class="fas fa-bolt"></i> Voltage between Line & Earth</span>
+          <span class="parameter-value" id="vle">Fetching Data...</span>
+        </div>
+        
+        <div class="parameter-row">
+          <span class="parameter-label"><i class="fas fa-current"></i> Current from Earthing</span>
+          <span class="parameter-value" id="ce">Fetching Data...</span>
+        </div>
+        
+        <div class="parameter-row">
+          <span class="parameter-label"><i class="fas fa-lightbulb"></i> Current from Light</span>
+          <span class="parameter-value" id="cl">Fetching Data...</span>
+        </div>
+        
+        <div class="parameter-row">
+          <span class="parameter-label"><i class="fas fa-power-off"></i> Light Status</span>
+          <span class="parameter-value" id="ls">Fetching Data...</span>
+        </div>
+        
+        <div class="parameter-row">
+          <span class="parameter-label"><i class="fas fa-ohm"></i> Earth Resistance</span>
+          <span class="parameter-value" id="r">Fetching Data...</span>
+        </div>
+      </div>
+
+    </div>
+    <div id="RTDBspinner-container" >
+      <div id="RTDBspinner"></div>
+    </div>
+    <div class="overlay" id="overlay" style=  "display: none;"></div>
+    <div id="logout" style="display: none;">
+      <h1>Sign Out</h1>
+      <div class="message">Are you sure you want to sign out?</div>
+      <div id="choice">
+        <button id="yes">Sign Out</button>
+        <button id="no">Cancel</button>
+      </div>
+    </div>
+    <script src="updatesScript.js"></script>
+
+</body>
+
+</html>

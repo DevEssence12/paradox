@@ -1,0 +1,133 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-section {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .illustration-section {
+            background-color: #f1f5ff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;  /* Changed from center to left */
+            max-width: 400px;
+        }
+        
+        .illustration-section img {
+            max-width: 100%;
+            height: auto;
+            display: block;   /* Added to keep image centered */
+            margin: 0 auto;   /* Added to keep image centered */
+        }
+        
+        .illustration-section h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: left;  /* Added to ensure heading is left-aligned */
+        }
+        
+        .illustration-section p {
+            color: #666;
+            margin-top: 10px;
+            text-align: left;  /* Added to ensure paragraph is left-aligned */
+        }
+
+        h1 {
+            font-size: 41px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .login-link {
+            color: #2d31fa;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2d31fa;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #2d31fa;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #1f22b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .illustration-section {
+                display: none;
+            }
+
+            .form-section {
+                padding: 20px;
+            }
+        }
+
