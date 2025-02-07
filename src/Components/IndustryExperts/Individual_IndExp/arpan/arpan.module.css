@@ -122,3 +122,10 @@
     opacity: 1;
   }
 }
+
+
+@media (max-width: 480px) {
+  .header {
+    height: 2rem;
+  }
+}

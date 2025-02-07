@@ -75,7 +75,7 @@ body,html{
 }
 
 .expertImage {
-  min-width: 20%;
+  min-width: 20rem;
   width: 50%;
   height: 450px;
   object-fit: cover;
@@ -183,6 +183,9 @@ body,html{
   .expertImage {
     height: 250px;
   }
+  .expertCard{
+    height: 25rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -208,5 +211,8 @@ body,html{
 
   .expertImage {
     height: 150px;
+  }
+  .expertCard{
+    height: 20rem;
   }
 }

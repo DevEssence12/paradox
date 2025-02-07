@@ -175,6 +175,8 @@ html {
 .mobileNavLink {
   padding: 1rem 0.5rem;
   border: none;
+  background-color: transparent;
+
 }
 
 body.menuOpen {
@@ -224,7 +226,7 @@ body.menuOpen {
 }
 
 .dropdownItem {
-  display: block;
+  display:inline;
   padding: 0.75rem 1.5rem;
   color: var(--text-primary);
   text-decoration: none;
