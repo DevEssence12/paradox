@@ -1,190 +1,271 @@
 .pageContainer {
-    margin-top: 5rem;
-    font-family: "Arial", sans-serif;
-    color: #333;
-    padding: 20px;
-    background: linear-gradient(120deg, #f0f4f8, #ffffff);
-  }
+  margin-top: 5rem;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background: linear-gradient(120deg, #f0f4f8, #ffffff);
+  overflow-x: hidden;
+  padding: 0 ;
+  perspective: 1000px;
+}
 
 .hero {
-    text-align: center;
-    margin-bottom: 50px;
-    padding: 60px 20px;
-    background-image: url("https://i.ibb.co/7p2LrcR/6.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
-  }
-  
-  .title {
-    font-size: 3rem;
-    font-weight: bold;
-    animation: fadeIn 2s ease;
-  }
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 60px 20px;
+  background-image: url("https://i.ibb.co/7p2LrcR/6.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
 
+.title {
+  position: relative;
+  font-size: 4rem;
+  font-weight: bold;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards, glowText 2s ease-in-out infinite;
+}
 
+.imageSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 2rem;
+  margin: 4rem auto;
+  max-width: 1200px;
+}
 
+.imageContainer {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-30px) rotateY(-10deg);
+  animation: fadeInRight 1s ease forwards 0.3s;
+  transition: transform 0.5s ease;
+}
+
+.imageContainer:hover {
+  transform: rotateY(5deg) scale(1.02);
+}
+
+.imageContent {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInLeft 1s ease forwards 0.3s;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+  transition: all 0.5s ease;
+}
+
+.image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(52, 152, 219, 0.3);
+}
 
 .intro {
   text-align: center;
-  margin-bottom: 2rem;
-  padding: 2rem 0;
-}
-
-.heading {
-  text-align: center;
-  padding-top: 9rem;
-  font-size: clamp(2rem, 5vw, 2.5rem);
-  font-weight: bold;
-  color: #2d6870;
-  margin-bottom: 1rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.5s;
 }
 
 .description {
-  font-size: clamp(1rem, 3vw, 1.125rem);
-  line-height: 1.6;
-  color: #666;
-  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #2c3e50;
   margin: 0 auto;
 }
 
 .subheading {
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: 2.5rem;
   font-weight: 600;
   color: #2c3e50;
-  margin-bottom: 1.5rem;
+  margin: 3rem 0 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.section {
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.subHeading {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.serviceList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.service {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+.list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
   transition: transform 0.3s ease;
 }
 
-.service:hover {
-  transform: translateY(-10px);
-}
-
-.service h3 {
-  font-size: 1.25rem;
-  color: #2c3e50;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.5rem;
-}
-
-.service ul, 
-.industries ul, 
-.whyChoose ul, 
-.process ol, 
-.studentSupport ul, 
-.successStories ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.service ul li,
-.industries ul li, 
-.whyChoose ul li, 
-.process ol li, 
-.studentSupport ul li, 
-.successStories ul li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.service ul li::before,
-.industries ul li::before, 
-.whyChoose ul li::before, 
-.process ol li::before, 
-.studentSupport ul li::before, 
-.successStories ul li::before {
-  content: '•';
+.list li::before {
+  content: '→';
   color: #3498db;
   position: absolute;
   left: 0;
-}
-
-.process ol {
-  counter-reset: process-counter;
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.process ol li {
-  counter-increment: process-counter;
-  position: relative;
-  padding-left: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.process ol li::before {
-  content: counter(process-counter) '.';
-  position: absolute;
-  left: 0;
-  color: #3498db;
   font-weight: bold;
 }
 
-.contact {
-  text-align: center;
-  background-color: #3498db;
-  color: white;
-  padding: 2rem;
-  border-radius: 12px;
+.list li:hover {
+  transform: translateX(10px);
+  color: #3498db;
+}
+
+.offeringsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 0.5rem;
-  }
+.offeringCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
 
-  .serviceList {
+.offeringCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+}
+
+.offeringCard h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.8rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2c3e50;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) rotateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    text-shadow: 2px 2px 15px rgba(52, 152, 219, 0.8);
+  }
+  100% {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .imageSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .imageContainer,
+  .imageContent {
+    width: 100%;
+  }
+  
+  .offeringsGrid {
     grid-template-columns: 1fr;
   }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .description {
-    font-size: 1rem;
-  }
-
-  .service {
-    padding: 1rem;
-  }
-
-  .service h3 {
-    font-size: 1.1rem;
+  
+  .subHeading {
+    font-size: 1.75rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .intro {
-    padding: 1rem 0;
+  .hero {
+    padding: 80px 20px;
   }
-
-  .heading {
-    font-size: 1.75rem;
+  
+  .title {
+    font-size: 2rem;
   }
-
+  
   .description {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+  
+  .subheading {
+    font-size: 1.8rem;
   }
 }

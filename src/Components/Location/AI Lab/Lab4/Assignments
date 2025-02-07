@@ -1,0 +1,1 @@
+1) Consider a graph having more than 8 nodes, with more than 12 edges between them with different cost (Select one start state and one goal state having minimum three different paths).find all possible paths with its cost alongwith also find ucs path for it. Print the status of all the push and pop operations of the stack.

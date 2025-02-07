@@ -4,33 +4,22 @@
   color: #333;
   background: linear-gradient(120deg, #f0f4f8, #ffffff);
   overflow-x: hidden;
+  padding: 0 ;
 }
 
 .hero {
-  position: relative;
   text-align: center;
   margin-bottom: 50px;
-  padding: 120px 20px;
-  background-image: url("https://i.ibb.co/pjBtY0hF/Turn-Your.png");
+  padding: 60px 20px;
+  background-image: url("https://i.ibb.co/7p2LrcR/6.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   border-radius: 8px;
-  overflow: hidden;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
-  z-index: 1;
-}
 
 .title {
   position: relative;
@@ -40,6 +29,48 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease forwards;
+}
+
+.imageSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 2rem;
+  margin: 4rem auto;
+  max-width: 1200px;
+}
+
+.imageContainer {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-30px) rotateY(-10deg);
+  animation: fadeInRight 1s ease forwards 0.3s;
+  transition: transform 0.5s ease;
+}
+
+.imageContainer:hover {
+  transform: rotateY(5deg) scale(1.02);
+}
+
+.imageContent {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInLeft 1s ease forwards 0.3s;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+  transition: all 0.5s ease;
+}
+
+.image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(52, 152, 219, 0.3);
 }
 
 .intro {
@@ -69,7 +100,7 @@
   animation: fadeInUp 0.8s ease forwards;
 }
 
-.serviceList {
+.areaList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -78,7 +109,7 @@
   animation: fadeIn 1s ease forwards 0.8s;
 }
 
-.service {
+.area {
   background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 15px;
@@ -87,12 +118,12 @@
   transform: translateY(0);
 }
 
-.service:hover {
+.area:hover {
   transform: translateY(-15px);
   box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
 }
 
-.service h3 {
+.area h3 {
   font-size: 1.5rem;
   color: #2c3e50;
   margin-bottom: 1.5rem;
@@ -100,20 +131,29 @@
   padding-bottom: 0.8rem;
 }
 
-.servicesInclude ul li,
+.area ul,
+.technologies ul,
+.whyChoose ul,
+.process ul {
+  list-style: none;
+  padding: 0;
+}
+
+.area ul li,
 .technologies ul li,
-.applications ul li,
-.whyChoose ul li {
+.whyChoose ul li,
+.process ul li {
   position: relative;
   padding-left: 1.8rem;
   margin-bottom: 1rem;
   line-height: 1.6;
+  transition: transform 0.3s ease;
 }
 
-.service ul li::before,
+.area ul li::before,
 .technologies ul li::before,
-.applications ul li::before,
-.whyChoose ul li::before {
+.whyChoose ul li::before,
+.process ul li::before {
   content: '→';
   color: #3498db;
   position: absolute;
@@ -121,41 +161,22 @@
   font-weight: bold;
 }
 
+.area ul li:hover,
+.technologies ul li:hover,
+.whyChoose ul li:hover,
+.process ul li:hover {
+  transform: translateX(10px);
+}
+
 .technologies,
-.applications,
-.whyChoose {
+.whyChoose,
+.process {
   padding: 3rem 2rem;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
   margin: 4rem 0;
   border-radius: 15px;
   opacity: 0;
   animation: fadeIn 1s ease forwards 1s;
-}
-
-.technologies ul,
-.applications ul,
-.whyChoose ul {
-  max-width: 800px;
-  margin: 0 auto;
-  list-style: none;
-  padding: 0;
-}
-
-.technologies ul li,
-.applications ul li,
-.whyChoose ul li {
-  background: white;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem 2rem 1.5rem 4rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.technologies ul li:hover,
-.applications ul li:hover,
-.whyChoose ul li:hover {
-  transform: translateX(10px);
 }
 
 .contact {
@@ -190,19 +211,51 @@
   }
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) rotateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .title {
     font-size: 2.5rem;
   }
   
-  .serviceList {
+  .imageSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .imageContainer,
+  .imageContent {
+    width: 100%;
+  }
+  
+  .areaList {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
   
   .technologies ul li,
-  .applications ul li,
-  .whyChoose ul li {
+  .whyChoose ul li,
+  .process ul li {
     padding: 1rem 1.5rem 1rem 3rem;
   }
 }
