@@ -30,7 +30,7 @@ const services = [
     path: "/iot-automation",
   },
   {
-    title: "Innovative Research & Development (R&D)",
+    title: "Research & Development (R&D)",
     description: "Our Research & Development (R&D) services are tailored to explore groundbreaking ideas, solve complex problems, and develop next-generation solutions.",
     icon: <FaDatabase />,
     color: "#FDCB6E",

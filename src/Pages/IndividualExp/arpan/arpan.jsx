@@ -53,12 +53,12 @@ const Arpan = () => {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Skills & Interests</h2>
           <ul className={styles.list}>
-            <li>Robotics System Design</li>
-            <li>IoT Development</li>
-            <li>Full Stack Development</li>
-            <li>Cloud Handling and Server Deployment</li>
-            <li>Robot Operating System (ROS2)</li>
-            <li>Encryption & Security Management</li>
+            <li>🤖Robotics System Design</li>
+            <li>🌐IoT Development</li>
+            <li>🤝Full Stack Development</li>
+            <li>☁︎Cloud Handling and Server Deployment</li>
+            <li>👾Robot Operating System (ROS2)</li>
+            <li>🔐Encryption & Security Management</li>
           </ul>
         </section>
 
@@ -67,8 +67,8 @@ const Arpan = () => {
           <h2 className={styles.sectionTitle}>Contact Me</h2>
           <p className={styles.text}>
             📧 Email:{" "}
-            <a href="mailto:arpan.baul.paradox@gmail.com" className={styles.link}>
-              arpan.baul.paradox@gmail.com
+            <a href="mailto:arpan.baul@paradoxinnovator.com" className={styles.link}>
+            arpan.baul@paradoxinnovator.com
             </a>
           </p>
           <p className={styles.text}>

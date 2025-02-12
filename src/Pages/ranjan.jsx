@@ -16,17 +16,26 @@ const Ranjan = () => {
             className={styles.profileImage}
           />
           <h1 className={styles.name}>Ranjan Kumar Gupta</h1>
-          <p className={styles.role}>Problem Solver | Mathematical Calculation | Hardware Enthusiast</p>
+          <p className={styles.role}>CTO  | R&D Engineer | Data Analyst</p>
         </header>
 
         {/* About Me Section */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>About Me</h2>
           <p className={styles.text}>
-            I am Ranjan Kumar Gupta, currently pursuing B.Tech in AEIE at *Heritage Institute of Technology*, Kolkata. With a deep passion for solving complex problems, I specialize in mathematical numerical theory and enjoy working on the hardware aspect of projects.
+          I am Ranjan Kumar Gupta, currently pursuing a B.Tech in Applied Electronics and 
+          Instrumentation Engineering at Heritage Institute of Technology, Kolkata. 
           </p>
           <p className={styles.text}>
-            I am always driven to find innovative solutions and bring technical expertise to hardware development.
+            I am always driven to find innovative solutions and bring technical expertise to
+             hardware development.Passionate
+           about solving complex problems, I specialize in mathematical numerical theory and 
+           have a keen interest in hardware development. My expertise lies in designing and 
+           optimizing electronic systems, integrating theoretical knowledge with practical 
+           applications to develop innovative solutions. With experience in industrial-level 
+           projects and robotics, I thrive in tackling real-world challenges that demand precision 
+           and analytical thinking. I am always eager to explore new technologies, collaborate on 
+           interdisciplinary projects, and push the boundaries of engineering innovation.
           </p>
         </section>
 
@@ -34,12 +43,13 @@ const Ranjan = () => {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Education</h2>
           <ul className={styles.list}>
-            <li>
-              <strong>B.Tech in AEIE</strong> - Heritage Institute of Technology, Kolkata
-            </li>
-            <li>
-              <strong>Class 12</strong> - Sunrise Dwarika School, Deoghar
-            </li>
+          <li>
+            <strong>Undergraduation</strong> -  Bachelor of Technology on Applied Electronics and Instrumentation Engineering from Heritage Institute of Technology,
+            Kolkata, West Bengal
+          </li>
+          <li>
+            <strong>Higher Secondary Education</strong> - Sunrise Dwarika Academy, Deoghar, Jharkhand
+          </li>
           </ul>
         </section>
 
@@ -47,9 +57,9 @@ const Ranjan = () => {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Expertise</h2>
           <ul className={styles.list}>
-            <li>Problem Solving</li>
-            <li>Mathematical Numerical Theory</li>
-            <li>Hardware Development</li>
+            <li>🔎R&D and Innovation</li>
+            <li>📐Mathematical Numerical Theory</li>
+            <li>💡Hardware Development</li>
           </ul>
         </section>
 
@@ -57,15 +67,22 @@ const Ranjan = () => {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Get in Touch</h2>
           <p className={styles.text}>
-            📍 Kalikapur Kolkata-700078
-          </p>
-          <p className={styles.text}>
             📧 Email:{" "}
-            <a href="mailto:ranjan.kumargupta.paradox@gmail.com" className={styles.link}>
-              ranjan.kumargupta.paradox@gmail.com
+            <a href="mailto:ranjan.kumargupta@paradoxinnovator.com" className={styles.link}>
+            ranjan.kumargupta@paradoxinnovator.com
             </a>
           </p>
-          <p className={styles.text}>📱 Phone: +91 97092 87187</p>
+          <p className={styles.text}>
+            🔗 LinkedIn:{" "}
+            <a
+              href="https://linkedin.com/in/ranjan-kumar-gupta-821820275/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              linkedin.com/in/ranjan-kumar-gupta-821820275/
+            </a>
+          </p>
           <p className={styles.footerText}>
             Let's collaborate and make things happen with precision and innovation!
           </p>

@@ -7,10 +7,11 @@ const UAVPage = () => {
   return (
     <div>
       <Navbar />
-      <div className={styles.pageContainer}>
-        <section className={styles.hero}>
+      <section className={styles.hero}>
           <h1 className={styles.title}>UAV Design & Manufacturing Services</h1>
         </section>
+      <div className={styles.pageContainer}>
+        
 
         <section className={styles.imageSection}>
           <div className={styles.imageContainer}>
