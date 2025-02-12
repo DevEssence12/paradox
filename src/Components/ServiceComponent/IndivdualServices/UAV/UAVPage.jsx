@@ -16,7 +16,7 @@ const UAVPage = () => {
         <section className={styles.imageSection}>
           <div className={styles.imageContainer}>
             <img 
-              src="https://i.ibb.co/pjBtY0hF/Turn-Your.png" 
+              src="https://i.postimg.cc/TPQGd05n/uav.png" 
               alt="UAV Design Services" 
               className={styles.image}
             />
