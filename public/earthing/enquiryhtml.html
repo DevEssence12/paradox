@@ -7,6 +7,33 @@
     <title>Contact Form</title>
 </head>
 <body>
+     <!-- Navigation Bar -->
+     <nav class="navbar">
+        <div class="updatescontainer">
+          <a href="#" class="nav-logo">
+            <img src="https://i.ibb.co/x3x4byM/logo-removebg-preview.png" alt="Paradox Innovator Logo" class="logo-image">
+            
+          </a>
+          
+          <div class="mobile-controls">
+            <!-- Hmaburger Icon -->    
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <!-- Navigation Menu -->
+          <div class="nav-menu">
+            <div class="nav-close">×</div>
+            <ul>
+              <li><a href="final.html#faqSection">FAQ</a></li>
+                  <li><a href="enquiryhtml.html">Enquiry</a></li>
+                  <li><a href="final.html#" onclick="openSignInPopup(); return false;">Sign In</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="container">
         <div class="form-section">
             <h1>Have a query? Drop in your questions</h1>
@@ -14,8 +41,8 @@
             
             <form id="contactForm" onsubmit="return handleSubmit(event)">
                 <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" required placeholder="Enter your User name">
+                    <label for="username">Yor Name</label>
+                    <input type="text" id="username" required placeholder="Enter your Full Name">
                     <span class="error" id="usernameError"></span>
                 </div>
 
@@ -116,5 +143,129 @@
             return false;
         }
     </script>
+    <footer class="footer">
+        <div class="footerContent">
+            <div class="brandSection">
+                <div class="logoContainer">
+                    <img src="https://i.ibb.co/PhpPbZH/building-future-2-Photoroom.png" alt="Logo" class="logo">
+                </div>
+                <p class="brandDescription"> Building innovative solutions for tomorrow's challenges. We combine cutting-edge 
+                    technology with forward-thinking approaches to create lasting impact.</p>
+            </div>
+            <div class="linksContainer">
+                <div class="linkSection">
+                    <h3 class="linkTitle">Company</h3>
+                    <ul class="linkList">
+                        <li >
+                            <a href="/about" class=link>About Us
+                            </a>
+                          </li>                
+                          <li >
+                            <a href="/services" class=link>Services
+                            </a>
+                          </li>
+                          <li >
+                            <a href="/careers" class=link>Careers
+                            </a>
+                          </li>
+                          <li >
+                            <a href="/contact" class=link>Contact
+                            </a>
+                          </li>
+                    </ul>
+                </div>
+                <div class="linkSection">
+                    <h3 class="linkTitle">Services</h3>
+                    <ul class="linkList">
+                        <li >
+                            <a href="#" class=link>Home Automation
+                            </a>
+                          </li>                
+                          <li >
+                            <a href="#" class=link>Research Projects
+                            </a>
+                          </li>
+                          <li >
+                            <a href="#" class=link>IOT and Automations
+                            </a>
+                          </li>
+                          <li >
+                            <a href="#" class=link>Help in college Projects
+                            </a>
+                          </li>
+                    </ul>
+                </div>
+                <div class ="linkSection">
+                    <h3 class = "linkTitle">Connect</h3>
+                    <ul class = "socialLinks">
+                        <li>
+                          <a 
+                            href="https://www.linkedin.com/company/paradox-innovator/"
+                            target="_blank"
+                            class = "socialLink"
+                          >
+                            <span class = "icon">    <i class="fa-brands fa-linkedin-in"></i> 
+                            </span>
+                            <span>LinkedIn</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                            href="https://youtube.com/@paradoxinnovator?si=6n7EEN_guo3QBTPz"
+                            class = "socialLink"
+                          >
+                            <span class = "icon">    <i class="fa-brands fa-youtube"></i>
+                            </span>
+                            <span>YouTube</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                            href="https://www.instagram.com/paradoxinnovator?igsh=MTRveTg2ZmR4N2VwMg=="
+                            class = "socialLink"
+                          >
+                            <span class= "icon">     <i class="fa-brands fa-instagram"></i>
+                            </span>
+                            <span>Instagram</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                            href="https://www.github.com/Paradox-Innovator-Group"
+                            class = "socialLink"
+                          >
+                            <span class = "icon">     <i class="fa-brands fa-github"></i> 
+                            </span>
+                            <span>GitHub</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a 
+                            href="mailto:info@paradoxinnovator.com"
+                            class = "socialLink"
+                          >
+                            <span class = "icon">     <i class="fa-solid fa-envelope"></i>  
+                            </span>
+                            <span>Gmail</span>
+                          </a>
+                        </li>
+        
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class = "bottomBar">
+            <p class = "copyright">
+                © 2025 Paradox Innovator. All rights reserved.
+                <br />
+                <a class = "copyright" href="/privacy">Privacy Policy</a>
+            </p>
+          </div>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+<script src="enquiry.js"></script>
 </body>
 </html>

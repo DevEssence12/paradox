@@ -36,7 +36,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 35px;
+  padding: 2px 25px;
 }
 
 .nav-logo {
@@ -46,12 +46,14 @@ body {
   font-weight: bold;
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .logo-image {
   width: 80px;
   height: 80px;
-  margin-right: 10px;
+  margin-right: 25px;
+  margin-left: 40px;
 }
 
 .nav-menu  {
@@ -101,11 +103,12 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  animation: fadeIn 1s ease;
+  /* animation: fadeIn 1s  ease; */
 }
 
 .container {
   margin-top: 190px;
+  margin-bottom: 150px;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -129,22 +132,21 @@ body {
   margin-bottom: 0px;
   border-radius: 25px;
 }
-
 #POP {
-
+  max-height: 100vh; /* Ensure it does not exceed the screen height */
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* Fit the entire viewport width */
+  height: 100vh; /* Fit the entire viewport height */
   background-color: rgba(0, 0, 0, 0.696);
   display: flex;
   justify-content: center;
-  margin-left: 10px;
   align-items: center;
   z-index: 1000;
   
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 1s ease;
+  overflow: hidden; /* Prevents scrolling */
 }
 
 
@@ -154,7 +156,7 @@ body {
   height: auto;
   /* background: linear-gradient(135deg, #92fdc7, #4dd1c6); */
   background-image: url("https://i.ibb.co/7p2LrcR/6.png");
-  padding: 40px;
+  padding: 30px 20px;
   border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr;
@@ -162,6 +164,7 @@ body {
   color: #333;
   transition: 0.5s ease-in-out;
   position: relative;
+  
 }
 
 /* New styles for pole ID display */
@@ -172,7 +175,7 @@ body {
   transform: translateX(-50%);
   background: #2e029d;
   color: white;
-  padding: 10px 30px;
+  padding: 10px 10px;
   border-radius: 20px;
   font-size: 1.2em;
   font-weight: bold;
@@ -388,7 +391,15 @@ body {
     align-items: center;
     gap: 15px;
   }
-
+  .nav-logo {
+    font-size: 18px;
+    margin-right: 0; /* Remove margin that was pushing menu down */
+  }
+  .logo-image {
+   /* width: 35px;
+    height: 35px; */
+    margin-left: 0;
+  }
   .nav-menu {
     position: fixed;
     right: -100%;
@@ -809,3 +820,193 @@ body {
     display: none;
   }
 }
+/*******************FOOTER*********************/
+
+:root {
+  --footer-bg: #f8f9fa;
+  --footer-text: #9f9fa5;
+  --footer-link: #4a5568;
+  --footer-link-hover: #0066ff;
+  --footer-border: #e2e8f0;
+  --bottom-bar-bg: #ffffff;
+}
+
+.footer {
+  background-image: url("https://i.ibb.co/D9K9gLx/Whats-App-Image-2025-01-23-at-10-15-49.jpg");
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.brandSection {
+  flex: 1;
+  max-width: 400px;
+}
+
+.logoContainer {
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  height: 9rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.brandDescription {
+  color: var(--footer-text);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.linksContainer {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+}
+
+.linkSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkTitle {
+  color: var(--footer-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.linkTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 30px;
+  height: 2px;
+  background-color: var(--footer-link-hover);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.8rem;
+}
+
+.privacy {
+  padding-left: 5rem;
+  color:#bfcfe2;
+}
+.socialLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socialLink {
+  color:#8e9297;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  color: var(--footer-link-hover);
+  transform: translateX(5px);
+}
+
+.icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: 1.2rem;
+}
+
+.link {
+  color:#8e9297;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--footer-link-hover);
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  color: var(--footer-link-hover);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.bottomBar {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  justify-items: center;
+}
+
+.copyright {
+  color:#8e9297;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .footerContent {
+      flex-direction: column;
+      gap: 3rem;
+  }
+
+  .brandSection {
+      max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footerContent {
+      padding: 0 1.5rem;
+  }
+
+  .linksContainer {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .linksContainer {
+      grid-template-columns: 1fr;
+  }
+}
+
+

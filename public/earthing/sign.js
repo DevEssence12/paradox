@@ -95,7 +95,7 @@ if (passwordInput && passwordToggle) {
     passwordToggle.addEventListener('click', function () {
         const type = passwordInput.getAttribute('type');
         passwordInput.setAttribute('type', type === 'password' ? 'text' : 'password');
-        passwordToggle.innerHTML = type === 'password' ? '👁️‍🗨️' : '👁️';
+        passwordToggle.innerHTML = type === 'password' ? '👁' : '👁️';
     });
 } else {
     console.error('Password input or toggle button not found!');
