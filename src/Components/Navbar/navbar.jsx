@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import styles from './navbar.module.css';
+import './navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // Mobile menu toggle
-  const [scrolled, setScrolled] = useState(false); // Navbar scroll effect
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null); // Tracks which mobile dropdown is open
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const handleMobileNavClick = () => {
     setIsOpen(false);
-    setMobileDropdownOpen(null); // Close any open dropdowns
+    setMobileDropdownOpen(null);
   };
 
   const toggleMobileDropdown = (dropdownName) => {
@@ -43,7 +43,7 @@ const Navbar = () => {
     { 
       name: 'Projects', 
       dropdown:[
-        {title: "Earthing Monitoring System ", path: "/earthing/final.html" },
+        {title: "Earthing Monitoring System", path: "/earthing/final.html" },
       ]
     },
   ];
@@ -53,42 +53,40 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={styles.navContainer}>
-        {/* Logo */}
-        <div className={styles.logoContainer}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="navContainer">
+        <div className="logoContainer">
           <img
             onClick={goHome}
             src="https://i.ibb.co/x3x4byM/logo-removebg-preview.png"
             alt="Paradox Innovator"
-            className={styles.logo}
+            className="logo"
           />
         </div>
 
-        {/* Desktop Navigation */}
-        <div className={styles.navLinks}>
+        <div className="navLinks">
           {navItems.map((item) =>
             item.dropdown ? (
               <div
                 key={item.name}
-                className={styles.navDropdown}
+                className="navDropdown"
                 onMouseEnter={() => setMobileDropdownOpen(item.name)}
                 onMouseLeave={() => setMobileDropdownOpen(null)}
               >
-                <span className={styles.navLink}>
+                <span className="navLink">
                   {item.name}
-                  <span className={styles.dropdownIcon}>▼</span>
+                  <span className="dropdownIcon">▼</span>
                 </span>
                 <div
-                  className={`${styles.dropdownMenu} ${
-                    mobileDropdownOpen === item.name ? styles.dropdownOpen : ''
+                  className={`dropdownMenu ${
+                    mobileDropdownOpen === item.name ? 'dropdownOpen' : ''
                   }`}
                 >
                   {item.dropdown.map((subItem, subIndex) => (
                     <a
                       key={subIndex}
                       href={subItem.path}
-                      className={styles.dropdownItem}
+                      className="dropdownItem"
                     >
                       {subItem.title}
                     </a>
@@ -96,47 +94,43 @@ const Navbar = () => {
                 </div>
               </div>
             ) : (
-              <a key={item.name} href={item.path} className={styles.navLink}>
+              <a key={item.name} href={item.path} className="navLink">
                 {item.name}
               </a>
             )
           )}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className={`${styles.menuButton} ${isOpen ? styles.menuOpen : ''}`}
+          className={`menuButton ${isOpen ? 'menuOpen' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
-          <span className={styles.menuIcon}></span>
+          <span className="menuIcon"></span>
         </button>
 
-        {/* Mobile Navigation */}
         <div
-          className={`${styles.mobileMenu} ${
-            isOpen ? styles.mobileMenuOpen : ''
-          }`}
+          className={`mobileMenu ${isOpen ? 'mobileMenuOpen' : ''}`}
           aria-hidden={!isOpen}
         >
           {navItems.map((item) =>
             item.dropdown ? (
               <div key={item.name}>
                 <button
-                  className={styles.mobileNavLink}
+                  className="mobileNavLink"
                   onClick={() => toggleMobileDropdown(item.name)}
                 >
                   {item.name}
-                  <span className={styles.dropdownIcon}>▼</span>
+                  <span className="dropdownIcon">▼</span>
                 </button>
                 {mobileDropdownOpen === item.name && (
-                  <div className={styles.mobileDropdown}>
+                  <div className="mobileDropdown">
                     {item.dropdown.map((subItem, subIndex) => (
                       <a
                         key={subIndex}
                         href={subItem.path}
-                        className={styles.mobileNavLink}
+                        className="mobileNavLink"
                         onClick={handleMobileNavClick}
                       >
                         {subItem.title}
@@ -149,7 +143,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.path}
-                className={styles.mobileNavLink}
+                className="mobileNavLink"
                 onClick={handleMobileNavClick}
               >
                 {item.name}
