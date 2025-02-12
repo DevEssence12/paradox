@@ -24,12 +24,12 @@ const About = () => {
       profileLink: "/ankit",
       image: "https://i.ibb.co/xXHxPM2/Ankit-Pandit.jpg",
     },
-    {
-      name: "Swayam Mishra",
-      role: "Business Management Enthusiast",
-      profileLink: "/swayam",
-      image: "https://i.ibb.co/XbbrsX8/Swayam-Mishra.jpg",
-    },
+    // {
+    //   name: "Swayam Mishra",
+    //   role: "Business Management Enthusiast",
+    //   profileLink: "/swayam",
+    //   image: "https://i.ibb.co/XbbrsX8/Swayam-Mishra.jpg",
+    // },
     {
       name: "Anshu Raj",
       role: "Founder | R&D Engineer",

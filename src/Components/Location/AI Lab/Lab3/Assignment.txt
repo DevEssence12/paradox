@@ -1,5 +1,0 @@
-3.1)  Find the shortest path in a maze using bfs(breadth first search) by considering blank space as a path, # as wall and also find the steps required to reach from start state to goal state.
-
-3.2)  Use the above question to find all using the concept of bfs(breadth first search)
-
-Note: For both the questions, print in graphical manner
