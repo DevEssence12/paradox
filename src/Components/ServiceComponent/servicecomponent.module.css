@@ -52,7 +52,7 @@ body, html {
   border-radius: 15px;
   max-height: 500px;
   border-left: 8px solid transparent;
-  padding: 25px;
+  padding: 15px;
   transition: all 0.3s ease;
   scroll-snap-align: center;
   display: flex;
@@ -88,6 +88,8 @@ body, html {
 }
 
 .exploreButton {
+  display: block;
+  margin: 50px auto;
   padding: 0.8rem 2rem;
   font-size: 1rem;
   color: white;
@@ -96,6 +98,7 @@ body, html {
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  justify-content: center;
 }
 
 

@@ -8,19 +8,19 @@ const About = () => {
   const teamMembers = [
     {
       name: "Shreya Panda",
-      role: "PR & Management Specialist",
+      role: "COO | PR & Management",
       profileLink: "/shreya",
       image: "https://i.ibb.co/VpYxxCG/Shreya-Panda.jpg",
     },
     {
       name: "Ranjan Kumar Gupta",
-      role: "R&D Engineer",
+      role: "CTO  | R&D Engineer | Data Analyst",
       profileLink: "/ranjan",
       image: "https://i.ibb.co/qBVn2kB/Whats-App-Image-2025-01-10-at-19-14-13-1.jpg",
     },
     {
       name: "Ankit Pandit",
-      role: "E-commerce | Content Creator",
+      role: "CMO | Content Creator | E-Commerce",
       profileLink: "/ankit",
       image: "https://i.ibb.co/xXHxPM2/Ankit-Pandit.jpg",
     },
@@ -41,11 +41,12 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <div className={styles.container}>
-        {/* Hero Section */}
-        <section className={styles.hero}>
+      <section className={styles.hero}>
           <h1 className={styles.title}>About US</h1>
         </section>
+      <div className={styles.container}>
+        {/* Hero Section */}
+        
 {/*         <section className={styles.hero}>
           <h1 className={styles.title}>Our History</h1>
         </section> */}
