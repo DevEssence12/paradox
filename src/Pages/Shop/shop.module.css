@@ -1,0 +1,22 @@
+.videoContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    align-items: center;
+    width: auto;
+    height: auto; /* Adjust height to suit your design */
+    background-color: #f0efef;
+    overflow: hidden; /* Prevent overflow if video is larger than container */
+    position:sticky;
+  }
+  
+  .videoElement {
+    width: 50%; /* Make video cover the container */
+    height: 50%; /* Ensure the video fills the container vertically */
+    object-fit: cover; /* Ensures the video covers the container while maintaining aspect ratio */
+    border: none; /* Removes any border */
+    margin: 0; /* Removes any default margin */
+    position: inherit;
+    position: center;
+  }
+  

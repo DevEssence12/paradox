@@ -59,11 +59,19 @@ const Footer = () => {
                   </a>
                 </li>
                 <li >
-                  <a href="/careers" className={styles.link}>Careers
+                  <a href="/career" className={styles.link}>Careers
                   </a>
                 </li>
                 <li >
                   <a href="/contact" className={styles.link}>Contact
+                  </a>
+                </li>
+                <li >
+                  <a href="/privacy" className={styles.link}>Privacy Policy
+                  </a>
+                </li>
+                <li >
+                  <a href="/terms" className={styles.link}>Terms and Conditions
                   </a>
                 </li>
             </ul>
@@ -129,7 +137,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                    href="mailto:info.paradoxinnovator@gmail.com"
+                    href="mailto:info@paradoxinnovator.com"
                     className={styles.socialLink}
                   >
                     <span className={styles.icon}>    <FaEnvelope /> 
@@ -147,7 +155,7 @@ const Footer = () => {
         <p className={styles.copyright}>
             © {currentYear} Paradox Innovator. All rights reserved.
             <br />
-            <a className={styles.privacy} href="/privacy">Privacy Policy</a>
+            {/* <a className={styles.privacy} href="/privacy">Privacy Policy</a> */}
         </p>
       </div>
 

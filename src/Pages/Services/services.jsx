@@ -77,11 +77,12 @@ const Services = () => {
   return (
     <div className={styles.servicesPage}>
       <Navbar />
-      <div className={styles.container}>
-        <header className={styles.header}>
+      <header className={styles.header}>
           <h1>Our Services</h1>
           <p>Paradox Innovator - Pioneering Tomorrow's Technology, Today</p>
         </header>
+      <div className={styles.container}>
+        
 
         <div className={styles.servicesContainer}>
           <div 

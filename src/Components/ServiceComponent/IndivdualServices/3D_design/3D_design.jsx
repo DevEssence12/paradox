@@ -15,7 +15,7 @@ const DDesignPage = () => {
         <section className={styles.imageSection}>
           <div className={styles.imageContainer}>
             <img 
-              src="https://i.ibb.co/pjBtY0hF/Turn-Your.png" 
+              src="https://i.ibb.co/FSt0B50/30443.jpg" 
               alt="3D Design and Manufacturing" 
               className={styles.image}
             />

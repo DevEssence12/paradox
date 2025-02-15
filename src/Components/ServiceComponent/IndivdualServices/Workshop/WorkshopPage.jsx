@@ -15,7 +15,7 @@ const WorkshopsPage = () => {
         <section className={styles.imageSection}>
           <div className={styles.imageContainer}>
             <img 
-              src="https://i.ibb.co/pjBtY0hF/Turn-Your.png" 
+              src="https://i.ibb.co/wFyzKJwR/office-scenes-composition-with-view-business-meeting-with-colleagues.png" 
               alt="Workshop Services" 
               className={styles.image}
             />
@@ -25,9 +25,15 @@ const WorkshopsPage = () => {
             <p className={styles.description}>
               At Paradox Innovator, we believe in empowering individuals and teams with the knowledge and skills they need to excel in today's rapidly evolving technological landscape. Our workshops are designed to provide hands-on learning experiences, combining theoretical knowledge with practical applications. Whether you're an engineering student or a tech enthusiast, our workshops cater to diverse audiences, helping them explore cutting-edge technologies and foster innovation.
             </p>
+            
           </div>
+          
         </section>
-
+        <img 
+              src="https://i.ibb.co/5X3MyzFy/ex-removebg-preview.png" 
+              alt="R&D Services" 
+              className={styles.bg}
+            />
         <section className={styles.workshopOfferings}>
           <h2 className={styles.subheading}>Our Workshop Offerings</h2>
           <div className={styles.workshopList}>
@@ -86,8 +92,14 @@ const WorkshopsPage = () => {
                 <li>Smart energy management and eco-friendly innovations.</li>
                 <li>Design and implementation of green technology solutions.</li>
               </ul>
+              
             </div>
           </div>
+          <img 
+              src="https://i.ibb.co/RGSH7Cyn/ed-removebg-preview.png" 
+              alt="R&D Services" 
+              className={styles.bg}
+            />
         </section>
 
         <section className={styles.studentApproach}>
@@ -98,7 +110,7 @@ const WorkshopsPage = () => {
             <li>Certification: Receive a certificate of participation to boost your credentials.</li>
           </ul>
         </section>
-
+        
         <section className={styles.whyAttend}>
           <h2 className={styles.subheading}>Why Attend Our Workshops?</h2>
           <ul>

@@ -2,20 +2,23 @@ import React from 'react';
 import styles from './IOT.module.css';
 import Navbar from '../../../Navbar/navbar';
 import Footer from '../../../Footer/footer';
+import { FaMicrochip, FaIndustry, FaBuilding, FaUserGraduate} from "react-icons/fa";
+
 
 const IOTPage = () => {
   return (
     <div>
       <Navbar />
-      <div className={styles.pageContainer}>
-        <section className={styles.hero}>
+      <section className={styles.hero}>
           <h1 className={styles.title}>IoT & Automation Services</h1>
         </section>
+      <div className={styles.pageContainer}>
+        
 
         <section className={styles.imageSection}>
           <div className={styles.imageContainer}>
             <img 
-              src="https://i.ibb.co/pjBtY0hF/Turn-Your.png" 
+              src="https://i.ibb.co/RpbdHcPB/iot.png" 
               alt="IoT and Automation" 
               className={styles.image}
             />
@@ -27,17 +30,27 @@ const IOTPage = () => {
             </p>
           </div>
         </section>
-
+        <img 
+              src="https://i.ibb.co/5X3MyzFy/ex-removebg-preview.png" 
+              alt="R&D Services" 
+              className={styles.bg}
+            />
         <section className={styles.intro}>
           <p className={styles.description}>
             We extend our expertise to college students, offering free consultancy and guidance to help them build IoT-based academic projects and gain hands-on experience in the world of connected technologies.
           </p>
         </section>
-
+        <img 
+              src="https://i.ibb.co/RGSH7Cyn/ed-removebg-preview.png" 
+              alt="R&D Services" 
+              className={styles.bg}
+            />
         <section className={styles.services}>
+        
           <h2 className={styles.subheading}>Our Services</h2>
           <div className={styles.serviceList}>
             <div className={styles.service}>
+              <FaMicrochip style={{ fontSize: "50px", color: "#71e317" }} />
               <h3>IoT System Development</h3>
               <ul>
                 <li>Custom IoT Solutions: Tailored IoT systems for applications like smart homes, healthcare, agriculture, and logistics.</li>
@@ -47,6 +60,7 @@ const IOTPage = () => {
               </ul>
             </div>
             <div className={styles.service}>
+            <FaIndustry style={{ fontSize: "50px", color: "#1777e3" }} />
               <h3>Industrial Automation</h3>
               <ul>
                 <li>Process Automation: Enhancing efficiency through automated workflows in manufacturing and production.</li>
@@ -55,6 +69,7 @@ const IOTPage = () => {
               </ul>
             </div>
             <div className={styles.service}>
+            <FaBuilding style={{ fontSize: "50px", color: "#1ff7e3" }} />
               <h3>Home and Building Automation</h3>
               <ul>
                 <li>Smart Homes: Automation of lighting, HVAC, security, and entertainment systems for a connected living experience.</li>
@@ -63,6 +78,7 @@ const IOTPage = () => {
               </ul>
             </div>
             <div className={styles.service}>
+            <FaUserGraduate style={{ fontSize: "50px", color: "#1faff3" }} />
               <h3>Student Project Support</h3>
               <ul>
                 <li>Free Consultancy: Assisting students in developing IoT-based projects for academic purposes.</li>

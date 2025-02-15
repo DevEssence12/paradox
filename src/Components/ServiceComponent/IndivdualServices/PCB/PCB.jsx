@@ -2,20 +2,27 @@ import React from 'react';
 import styles from './PCB.module.css';
 import Footer from '../../../Footer/footer';
 import Navbar from '../../../Navbar/navbar';
+import {
+   GiCircuitry 
+  
+  } from "react-icons/gi";
+  import { FaThLarge,FaHome, FaPaintBrush , FaUserGraduate} from "react-icons/fa";
+
 
 const PCBPage = () => {
   return (
     <div>
       <Navbar />
-      <div className={styles.pageContainer}>
-        <section className={styles.hero}>
+      <section className={styles.hero}>
           <h1 className={styles.title}>PCB Designing Services</h1>
         </section>
+      <div className={styles.pageContainer}>
+        
 
         <section className={styles.imageSection}>
           <div className={styles.imageContainer}>
             <img 
-              src="https://i.ibb.co/pjBtY0hF/Turn-Your.png" 
+              src="https://i.ibb.co/Myk1ppZM/pcb1.png" 
               alt="PCB Design Services" 
               className={styles.image}
             />
@@ -38,6 +45,7 @@ const PCBPage = () => {
           <h2 className={styles.subheading}>Our PCB Design Services</h2>
           <div className={styles.serviceList}>
             <div className={styles.service}>
+            <GiCircuitry style={{ fontSize: "50px", color: "#e36417" }} />
               <h3>Schematic Design</h3>
               <ul>
                 <li>Translating your circuit ideas into detailed, professional-grade schematics.</li>
@@ -45,6 +53,7 @@ const PCBPage = () => {
               </ul>
             </div>
             <div className={styles.service}>
+            <FaThLarge style={{ fontSize: "50px", color: "#17e383" }} />
               <h3>Layout Design</h3>
               <ul>
                 <li>Designing layouts optimized for space, performance, and manufacturability.</li>
@@ -52,6 +61,7 @@ const PCBPage = () => {
               </ul>
             </div>
             <div className={styles.service}>
+            <FaHome style={{ fontSize: "50px", color: "#122383" }} />
               <h3>Complex Routing Assistance</h3>
               <ul>
                 <li>Expertise in high-speed routing for advanced circuits.</li>
@@ -60,6 +70,7 @@ const PCBPage = () => {
               </ul>
             </div>
             <div className={styles.service}>
+            <FaPaintBrush style={{ fontSize: "50px", color: "#e3bb17" }} />
               <h3>Design Validation</h3>
               <ul>
                 <li>Thorough design checks to ensure compliance with industry standards.</li>
@@ -68,6 +79,7 @@ const PCBPage = () => {
               </ul>
             </div>
             <div className={styles.service}>
+            <FaUserGraduate style={{ fontSize: "50px", color: "#1777e3" }} />
               <h3>Student Project Support</h3>
               <ul>
                 <li>Free Consultancy: Guidance for college students to design and develop PCBs for academic projects.</li>
@@ -101,7 +113,11 @@ const PCBPage = () => {
         <section className={styles.contact}>
           <h2 className={styles.subheading}>Get in Touch</h2>
           <p>If you're looking for professional PCB design services, get in touch with us to discuss your project needs.</p>
+          <button  className={styles.exploreButton}>
+        Contact US
+      </button>
         </section>
+        
       </div>
       <Footer />
     </div>

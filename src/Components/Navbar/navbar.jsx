@@ -44,8 +44,16 @@ const Navbar = () => {
       name: 'Projects', 
       dropdown:[
         {title: "Earthing Monitoring System", path: "/earthing/final.html" },
+        {title: "DIY Washing Machine", path: "/earth" },
+        {title: "Rescuer", path: "/earth" },
+        {title: "Transport Guards", path: "/earth" },
+        {title: "PID Line Follower", path: "/earth" },
+        {title: "Smart Toilets", path: "/earth" },
+        {title: "Non-invasive Moisture Meter", path: "/earth" },
+        {title: "Smart Locker", path: "/earth" },
       ]
     },
+    { name: 'SHOP', path: '/shop'    },
   ];
 
   function goHome() {
@@ -154,6 +162,8 @@ const Navbar = () => {
       </div>
     </nav>
   );
+  
 };
+
 
 export default Navbar;
