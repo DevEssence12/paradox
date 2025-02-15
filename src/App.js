@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/home';
+import Career from './Pages/Career/career'; // Import the Career component
+import Shop from './Pages/Shop/shop';
+import Terms from './Pages/Terms/terms';
 import About from './Pages/About/about';
 import Contact from './Pages/Contact/contact';
 import Services from './Pages/Services/services';
@@ -66,6 +69,9 @@ function App() {
           <Route path="/workshops" element={<WorkshopPage />} /> {/* Corrected the component name */}
           <Route path="/arpan-baul" element={<Arpan />} />
           <Route path="/samiul-alam" element={<Samiul />} />
+          <Route path="/career" element={<Career />} /> 
+          <Route path="/shop" element={<Shop />} /> 
+          <Route path="/terms" element={<Terms />} /> 
 
         </Routes>
       </div>

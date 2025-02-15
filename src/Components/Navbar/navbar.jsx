@@ -46,6 +46,7 @@ const Navbar = () => {
         {title: "Earthing Monitoring System", path: "/earthing/final.html" },
       ]
     },
+    { name: 'SHOP', path: '/shop'    },
   ];
 
   function goHome() {
@@ -154,6 +155,8 @@ const Navbar = () => {
       </div>
     </nav>
   );
+  
 };
+
 
 export default Navbar;

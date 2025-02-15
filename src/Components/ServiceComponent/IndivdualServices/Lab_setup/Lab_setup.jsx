@@ -15,7 +15,7 @@ const LabSetupPage = () => {
         <section className={styles.imageSection}>
           <div className={styles.imageContainer}>
             <img 
-              src="https://i.ibb.co/pjBtY0hF/Turn-Your.png" 
+              src="https://i.ibb.co/bM17Npyn/2962489-removebg-preview.png" 
               alt="Lab Setup Services" 
               className={styles.image}
             />

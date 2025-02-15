@@ -2,6 +2,13 @@ import React from "react";
 import styles from "./UAVPage.module.css";
 import Navbar from "../../../Navbar/navbar";
 import Footer from "../../../Footer/footer";
+import { 
+  FaHelicopter, FaIndustry, FaLaptop, FaTools,
+  FaUserGraduate
+} from "react-icons/fa";
+
+
+
 
 const UAVPage = () => {
   return (
@@ -34,7 +41,6 @@ const UAVPage = () => {
             From conceptualization to manufacturing, our team is dedicated to delivering high-quality UAV solutions that meet your specific requirements and exceed your expectations.
           </p>
         </section>
-
         <section className={styles.section}>
           <h2 className={styles.subHeading}>Why Choose Our UAV Solutions?</h2>
           <ul className={styles.list}>
@@ -50,22 +56,28 @@ const UAVPage = () => {
           <h2 className={styles.subHeading}>Our Offerings</h2>
           <div className={styles.offeringsGrid}>
             <div className={styles.offeringCard}>
+              
+        <FaHelicopter   style={{ fontSize: "50px", color: "#007bff" }}/>
               <h3>UAV Design Services</h3>
               <p>Concept development, aerodynamics optimization, payload customization, and prototyping.</p>
             </div>
             <div className={styles.offeringCard}>
+            <FaIndustry   style={{ fontSize: "50px", color: "#c83111" }}/>
               <h3>UAV Manufacturing</h3>
               <p>Precision assembly, high-quality materials, and rigorous quality assurance.</p>
             </div>
             <div className={styles.offeringCard}>
+            <FaLaptop   style={{ fontSize: "50px", color: "#11c88e" }}/>
               <h3>Software Integration</h3>
               <p>Navigation systems, real-time data processing, and tailored applications.</p>
             </div>
             <div className={styles.offeringCard}>
+            <FaTools   style={{ fontSize: "50px", color: "#c83111" }}/>
               <h3>Maintenance and Support</h3>
               <p>Comprehensive after-sales support, routine maintenance, and upgrade services.</p>
             </div>
             <div className={styles.offeringCard}>
+            <FaUserGraduate   style={{ fontSize: "50px", color: "#1c9da2" }}/>
               <h3>Student Project Support</h3>
               <p>Free consultancy, one-on-one guidance, and project assistance for college students.</p>
             </div>
