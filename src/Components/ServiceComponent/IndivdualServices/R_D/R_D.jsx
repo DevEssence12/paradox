@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './R_D.module.css';
 import Navbar from '../../../Navbar/navbar';
 import Footer from '../../../Footer/footer';
-import { FaThLarge,FaHome, FaPaintBrush , FaUserGraduate, FaLightbulb, FaDraftingCompass, FaIndustry} from "react-icons/fa";
+import {  FaUserGraduate, FaLightbulb, FaDraftingCompass, FaIndustry} from "react-icons/fa";
 
 const RDPage = () => {
   return (
