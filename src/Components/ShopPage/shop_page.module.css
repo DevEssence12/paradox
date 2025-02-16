@@ -1,0 +1,52 @@
+/* Container for each slide */
+.slideContainer {
+  position: relative;
+}
+
+/* Make the link cover the entire slide */
+.slideLink {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Style for the slide image */
+.slideImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Shop Now button overlay */
+
+
+/* Custom arrow styling */
+.customArrow {
+  opacity: 1; /* Force visible */
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Make arrows visible when hovering over the slide container */
+.customArrow:hover {
+  color: #000;
+}
+
+/* Styling for arrow icon */
+.arrowIcon {
+  font-size: 30px;
+  color: #000;
+  background-color: rgb(61, 146, 215);
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+/* Optional: Customize the default slick arrow buttons (if needed) */
+.slick-prev:before, 
+.slick-next:before {
+  display: none;
+}

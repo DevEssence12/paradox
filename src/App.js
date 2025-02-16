@@ -29,6 +29,7 @@ import IOTPage from './Components/ServiceComponent/IndivdualServices/IOT/IOT';
 import LabSetupPage from './Components/ServiceComponent/IndivdualServices/Lab_setup/Lab_setup'; 
 import PCBPage from './Components/ServiceComponent/IndivdualServices/PCB/PCB'; 
 import RDPage from './Components/ServiceComponent/IndivdualServices/R_D/R_D';
+import ShopComponent from './Components/ShopPage/shop_page';
 import Arpan from './Pages/IndividualExp/arpan/arpan.jsx'
 import Samiul from './Pages/IndividualExp/samiul/samiul.jsx'
 
@@ -72,6 +73,7 @@ function App() {
           <Route path="/career" element={<Career />} /> 
           <Route path="/shop" element={<Shop />} /> 
           <Route path="/terms" element={<Terms />} /> 
+          <Route path="/shop_page" element={<ShopComponent />} /> 
 
         </Routes>
       </div>

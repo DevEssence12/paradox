@@ -16,7 +16,7 @@ const Anshu = () => {
           className={styles.profileImage}
         />
         <h1 className={styles.name}>Anshu Raj</h1>
-        <p className={styles.role}>Founder | Hardware Engineer</p>
+        <p className={styles.role}>Founder & CEO | R&D Engineer | Hardware Engineer</p>
       </header>
 
       {/* About Me Section */}
@@ -54,7 +54,7 @@ const Anshu = () => {
           <li>💡Hardware Development</li>
           <li>🎗️Innovative Problem Solving</li>
           <li>⚙️Research and Development</li>
-          <li>💻Micro-Controller Expert</li>
+          <li>💻Embedded System Designing</li>
           <li>📀PCB Designer</li>
           <li>📦3D Modelling</li>
         </ul>
@@ -65,10 +65,21 @@ const Anshu = () => {
         <h2 className={styles.sectionTitle}>Contact Me</h2>
         <p className={styles.text}>
           📧 Email:{" "}
-          <a href="mailto:anshu.raj.paradox@gmail.com" className={styles.link}>
-            anshu.raj.paradox@gmail.com
+          <a href="mailto:anshu.raj@paradoxinnovator.com" className={styles.link}>
+          anshu.raj@paradoxinnovator.com
           </a>
         </p>
+        <p className={styles.text}>
+            🔗 LinkedIn:{" "}
+            <a
+              href="https://linkedin.com/in/anshu-raj-b303b3248/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              linkedin.com/in/ankit-pandit-2915822b6
+            </a>
+          </p>
         <p className={styles.footerText}>
           Together, let’s transform ideas into impactful solutions for a better
           future!
