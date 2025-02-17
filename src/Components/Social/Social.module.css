@@ -1,6 +1,6 @@
 .iconContainer {
     position: fixed;
-    top: 90%;
+    top: 85%;
     right: 1rem;
     transform: translateY(-50%);
   }
@@ -12,17 +12,20 @@
   }
   
   .whatsappIcon {
-    background-color: #25D366;
-    border-radius: 50%;
-    padding: 0.5rem;
+    background-color: transparent;
+    /* border-radius: 50%; */
+    /* padding: 0.5rem; */
     border: none;
     cursor: pointer;
   }
+  .whatsappIcon:hover{
+    cursor: pointer;
+  }
   
-  .phoneIcon {
-    background-color: #007bff;
-    border-radius: 50%;
-    padding: 0.5rem;
+  .phoneIcon { 
+    background-color: transparent;
+    /* border-radius: 50%; */
+    /* padding: 16px 0px; */
     border: none;
     cursor: pointer;
   }
