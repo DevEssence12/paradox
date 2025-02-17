@@ -40,30 +40,30 @@ import Samiul from './Pages/IndividualExp/samiul/samiul.jsx'
 
 function App() {
   // Add the code here so it applies globally
-  useEffect(() => {
-    const handleContextMenu = (e) => {
-      e.preventDefault();
-    };
+  // useEffect(() => {
+  //   const handleContextMenu = (e) => {
+  //     e.preventDefault();
+  //   };
 
-    const handleKeyDown = (e) => {
-      if (
-        e.key === 'F12' ||
-        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-        (e.ctrlKey && e.key === 'U')
-      ) {
-        e.preventDefault();
-      }
-    };
+  //   const handleKeyDown = (e) => {
+  //     if (
+  //       e.key === 'F12' ||
+  //       (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+  //       (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+  //       (e.ctrlKey && e.key === 'U')
+  //     ) {
+  //       e.preventDefault();
+  //     }
+  //   };
 
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('keydown', handleKeyDown);
+  //   document.addEventListener('contextmenu', handleContextMenu);
+  //   document.addEventListener('keydown', handleKeyDown);
 
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener('contextmenu', handleContextMenu);
+  //     document.removeEventListener('keydown', handleKeyDown);
+  //   };
+  // }, []);
 
   return (
     <Router>

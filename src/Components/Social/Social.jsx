@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Social.module.css';
-import { FaWhatsapp, FaPhone } from 'react-icons/fa';
 
 const SocialIcons = () => {
   const handleWhatsappClick = () => {

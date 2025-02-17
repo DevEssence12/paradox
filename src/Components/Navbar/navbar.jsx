@@ -39,7 +39,7 @@ const Navbar = () => {
       ],
     },
     { name: 'Blogs', path: '/earth' },
-    { name: 'Contact', path: '/contact' },
+    
     { 
       name: 'Projects', 
       dropdown:[
@@ -54,6 +54,7 @@ const Navbar = () => {
       ]
     },
     { name: 'SHOP', path: '/shop'    },
+    { name: 'Contact', path: '/contact' },
   ];
 
   function goHome() {
