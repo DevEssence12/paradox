@@ -8,7 +8,6 @@ const contact = () => {
   return (
     <div>
       <Navbar />
-     
       <Location />
       <Footer />
     </div>
