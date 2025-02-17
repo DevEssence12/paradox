@@ -1,6 +1,6 @@
 .locationContainer {
     margin-top: 6rem;
-    padding: 50px;
+    padding: 0px;
     background-color: #f4f4f9;
     text-align: center;
     border-radius: 12px;
@@ -73,6 +73,7 @@
   .mapContainer {
     position: relative;
     animation: fadeInUp 1s forwards;
+    padding : auto 20px;
   }
   
   .map {
@@ -81,9 +82,9 @@
     transition: transform 0.3s ease;
   }
   
-  .map:hover {
+  /* .map:hover {
     transform: scale(1.05);
-  }
+  } */
   
   /* Keyframe Animations */
   @keyframes fadeIn {
