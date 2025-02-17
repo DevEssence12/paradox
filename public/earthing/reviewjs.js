@@ -194,3 +194,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+//////////disable inspect option////////////////
+ // Disable right-click context menu
+ document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+  // Optional: Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+      (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+      (e.ctrlKey && e.key === 'U')
+    ) {
+      e.preventDefault();
+    }
+  });
