@@ -32,7 +32,7 @@ const About = () => {
     // },
     {
       name: "Anshu Raj",
-      role: "Founder | R&D Engineer",
+      role: "Founder & CEO | R&D Engineer | Hardware Engineer",
       profileLink: "/anshu",
       image: "https://i.ibb.co/GvzQX4H/Anshu-Raj.jpg",
     },
