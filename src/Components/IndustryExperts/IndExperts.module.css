@@ -55,11 +55,13 @@ body,html{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 0 20px;
+  padding: 10px auto;
+  align-items: center;
+  justify-items: center;
 }
 
 .expertCard {
-  height: 40rem;
+  height: 30rem;
   position:relative;
   background: #ffffff;
   border-radius: 10px;
@@ -67,6 +69,9 @@ body,html{
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  width: 300px;
+  align-items: center;
+  padding: auto;
 }
 
 .expertCard:hover {
@@ -77,8 +82,8 @@ body,html{
 .expertImage {
   min-width: 20rem;
   width: 50%;
-  height: 450px;
-  object-fit: cover;
+  height: 300px;
+  object-fit:fill;
   border-bottom: 2px solid #0d6efd;
 }
 
@@ -178,6 +183,7 @@ body,html{
 
   .expertsGrid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    
   }
 
   .expertImage {
@@ -210,9 +216,9 @@ body,html{
   }
 
   .expertImage {
-    height: 150px;
+    height: 250px;
   }
   .expertCard{
-    height: 20rem;
+    height: 25rem;
   }
 }
