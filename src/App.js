@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/home';
 import Career from './Pages/Career/career'; // Import the Career component
@@ -37,6 +38,32 @@ import Samiul from './Pages/IndividualExp/samiul/samiul.jsx'
 
 
 function App() {
+  // Add the code here so it applies globally
+  useEffect(() => {
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+    };
+
+    const handleKeyDown = (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        (e.ctrlKey && e.key === 'U')
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
     <Router>
       <div className="App">
@@ -62,19 +89,18 @@ function App() {
           <Route path="/vishwamitra" element={<Vishwamitra />} />
           <Route path="/earth" element={<VideoDisplay />} />
           <Route path="/uav-design" element={<UAVPage />} />
-          <Route path="/3d-design" element={<DDesignPage />} /> 
-          <Route path="/iot-automation" element={<IOTPage />} /> 
-          <Route path="/research-development" element={<RDPage />} /> 
-          <Route path="/lab-setup" element={<LabSetupPage />} /> 
-          <Route path="/pcb-design" element={<PCBPage />} /> 
-          <Route path="/workshops" element={<WorkshopPage />} /> {/* Corrected the component name */}
+          <Route path="/3d-design" element={<DDesignPage />} />
+          <Route path="/iot-automation" element={<IOTPage />} />
+          <Route path="/research-development" element={<RDPage />} />
+          <Route path="/lab-setup" element={<LabSetupPage />} />
+          <Route path="/pcb-design" element={<PCBPage />} />
+          <Route path="/workshops" element={<WorkshopPage />} />
           <Route path="/arpan-baul" element={<Arpan />} />
           <Route path="/samiul-alam" element={<Samiul />} />
-          <Route path="/career" element={<Career />} /> 
-          <Route path="/shop" element={<Shop />} /> 
-          <Route path="/terms" element={<Terms />} /> 
-          <Route path="/shop_page" element={<ShopComponent />} /> 
-
+          <Route path="/career" element={<Career />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/shop_page" element={<ShopComponent />} />
         </Routes>
       </div>
     </Router>
