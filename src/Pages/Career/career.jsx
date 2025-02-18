@@ -1,113 +1,88 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './career.module.css';
-import Footer from "../../Components/Footer/footer";
-import Navbar from "../../Components/Navbar/navbar";
+import Footer from '../../Components/Footer/footer';
+import Navbar from '../../Components/Navbar/navbar';
 
-// Helper functions to render key requirements for each role
-const renderHardwareEngineerDetails = () => {
-  return (
-    <div>
-      <p>
-        <strong>Key Requirements:</strong>
-      </p>
-      <ul>
-        <li>Bachelor's degree in Electrical or Electronics Engineering.</li>
-        <li>Experience with PCB design and embedded systems.</li>
-        <li>Strong problem-solving skills and attention to detail.</li>
-      </ul>
-    </div>
-  );
-};
-
-const renderSoftwareDeveloperDetails = () => {
-  return (
-    <div>
-      <p>
-        <strong>Key Requirements:</strong>
-      </p>
-      <ul>
-        <li>Proficiency in JavaScript, React, or similar frameworks.</li>
-        <li>Experience with RESTful APIs and microservices.</li>
-        <li>Knowledge of software development best practices.</li>
-      </ul>
-    </div>
-  );
-};
-
-const renderProjectManagerDetails = () => {
-  return (
-    <div>
-      <p>
-        <strong>Key Requirements:</strong>
-      </p>
-      <ul>
-        <li>Experience managing cross-functional teams.</li>
-        <li>Excellent communication and leadership skills.</li>
-        <li>Ability to manage timelines and budgets effectively.</li>
-      </ul>
-    </div>
-  );
-};
-
-const renderPRMarketingSpecialistDetails = () => {
-  return (
-    <div>
-      <p>
-        <strong>Key Requirements:</strong>
-      </p>
-      <ul>
-        <li>Experience in public relations, social media, or marketing.</li>
-        <li>Strong written and verbal communication skills.</li>
-        <li>Creative mindset with the ability to work under pressure.</li>
-      </ul>
-    </div>
-  );
-};
-
-const renderNoPositionDetails = () => {
-  return (
-    <div>
-      <p>
-        <strong>
-          We're all set for now, but the future is full of possibilities—stay tuned for upcoming opportunities!
-        </strong>
-      </p>
-    </div>
-  );
-};
-
-// A function to return the details component based on the role
-const renderRoleDetails = (role) => {
-  switch (role) {
-    case 'Hardware Engineer':
-      return renderHardwareEngineerDetails();
-    case 'Software Developer':
-      return renderSoftwareDeveloperDetails();
-    case 'Project Manager':
-      return renderProjectManagerDetails();
-    case 'Marketing Specialist':
-      return renderPRMarketingSpecialistDetails();
-    case 'No Position':
-      return renderNoPositionDetails();
-    default:
-      return null;
-  }
+const roleDetails = {
+  'Hardware Engineer': [
+    'Bachelors degree in Electrical or Electronics Engineering.',
+    'Experience with PCB design and embedded systems.',
+    'Strong problem-solving skills and attention to detail.',
+  ],
+  'Software Developer': [
+    'Proficiency in JavaScript, React, or similar frameworks.',
+    'Experience with RESTful APIs and microservices.',
+    'Knowledge of software development best practices.',
+  ],
+  'Project Manager': [
+    'Experience managing cross-functional teams.',
+    'Excellent communication and leadership skills.',
+    'Ability to manage timelines and budgets effectively.',
+  ],
+  'Marketing Specialist': [
+    'Experience in public relations, social media, or marketing.',
+    'Strong written and verbal communication skills.',
+    'Creative mindset with the ability to work under pressure.',
+  ],
+  'No Position': [
+    "We're all set for now, but the future is full of possibilities—stay tuned for upcoming opportunities!"
+  ],
 };
 
 const CareersPage = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [formData, setFormData] = useState({
+    Name: '',
+    Email: '',
+    Position: '',
+    Resume: null,
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const roles = [
-    // Uncomment and add roles as needed
-    // 'Hardware Engineer',
-    // 'Software Developer',
-    // 'Project Manager',
-    // 'Marketing Specialist',
-    'No Position'
+  const roles = ['No Position',
+
+    //define roles
   ];
 
-  // Toggle dropdown only if the role is not "No Position"
+  const handleInputChange = (e) => {
+    const { id, value, files } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: files ? files[0] : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const data = new FormData();
+    data.append('Name', formData.Name);
+    data.append('Email', formData.Email);
+    data.append('Position', formData.Position);
+    data.append('Resume', formData.Resume);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xjkgpoeo', {
+        method: 'POST',
+        body: data,
+      });
+
+      if (response.ok) {
+        alert('Submitted successfully. We will update you for upcoming or relevant roles.');
+        window.location.href = 'https://paradoxinnovator.com/';
+      } else {
+        const errorData = await response.json();
+        alert(`Failed to send message: ${errorData.message || 'Unknown error'}`);
+      }
+    } catch (error) {
+      alert(`An error occurred: ${error.message}`);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const toggleDropdown = (index) => {
     if (roles[index] !== 'No Position') {
       setActiveDropdown(activeDropdown === index ? null : index);
@@ -120,15 +95,11 @@ const CareersPage = () => {
       <section className={styles.hero}>
         <h1 className={styles.title}>Career</h1>
       </section>
+
       <div className={styles.container}>
-        {/* Hero Section */}
         <section className={styles.heading}>
           <div className={styles.heroContent}>
-            <img
-              src="https://i.ibb.co/Cp37HKcb/vc.png"
-              alt="Paradox Innovator"
-              className={styles.heroImage}
-            />
+            <img src="https://i.ibb.co/Cp37HKcb/vc.png" alt="Paradox Innovator" className={styles.heroImage} />
             <div className={styles.textContainer}>
               <motion.h1
                 className={styles.heroTitle}
@@ -139,16 +110,12 @@ const CareersPage = () => {
                 Join Paradox Innovator
               </motion.h1>
               <p className={styles.heroSubtitle}>
-                <strong>
-                  At Paradox Innovator, we don’t just create technology—we engineer solutions that redefine industries.
-                </strong>
-                Our team thrives on curiosity, creativity, and a relentless drive to solve real-world challenges. Whether it’s pioneering groundbreaking hardware innovations or delivering robust software solutions, we are committed to shaping a smarter, safer, and more efficient industrial future. When you join us, you become part of a dynamic ecosystem where your ideas are valued, your skills are nurtured, and your contributions have a tangible impact. If you have the passion to innovate and the determination to make a difference, Paradox Innovator is the place for you. Come, be a part of a legacy in the making—where innovation knows no bounds.
+              At<strong> Paradox Innovator</strong> , we don’t just create technology—we engineer solutions that redefine industries. Our team thrives on curiosity, creativity, and a relentless drive to solve real-world challenges. Whether it’s pioneering groundbreaking hardware innovations or delivering robust software solutions, we are committed to shaping a smarter, safer, and more efficient industrial future. When you join us, you become part of a dynamic ecosystem where your ideas are valued, your skills are nurtured, and your contributions have a tangible impact. If you have the passion to innovate and the determination to make a difference, Paradox Innovator is the place for you. Come, be a part of a legacy in the making—where innovation knows no bounds.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Open Positions */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Open Positions</h2>
           <div className={styles.grid}>
@@ -164,18 +131,18 @@ const CareersPage = () => {
                     </button>
                     {activeDropdown === index && (
                       <div className={styles.dropdownContent}>
-                        <p className={styles.cardDescription}>
-                          We are looking for a talented {role} to join our innovative team. If you have a passion for technology and problem-solving, apply now!
-                        </p>
-                        {renderRoleDetails(role)}
+                        <ul>
+                          {roleDetails[role].map((req, i) => (
+                            <li key={i}>{req}</li>
+                          ))}
+                        </ul>
                         <button className={styles.button}>Apply Now</button>
                       </div>
                     )}
                   </>
                 ) : (
-                  // If "No Position", simply show the details text
                   <div className={styles.dropdownContent}>
-                    {renderRoleDetails(role)}
+                    <p>{roleDetails[role]}</p>
                   </div>
                 )}
               </div>
@@ -183,24 +150,19 @@ const CareersPage = () => {
           </div>
         </section>
 
-        {/* Why Join Us */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Why Join Paradox Innovator?</h2>
           <div className={styles.grid}>
-            {[
-              {
-                title: 'Innovation & Impact',
-                desc: 'Work on groundbreaking industrial projects that make a difference.',
-              },
-              {
-                title: 'Collaborative Team',
-                desc: 'Join a team that values creativity, teamwork, and problem-solving.',
-              },
-              {
-                title: 'Growth Opportunities',
-                desc: 'Opportunities for learning, growth, and industry exposure.',
-              },
-            ].map((item) => (
+            {[{
+              title: 'Innovation & Impact',
+              desc: 'Work on groundbreaking industrial projects that make a difference.',
+            }, {
+              title: 'Collaborative Team',
+              desc: 'Join a team that values creativity, teamwork, and problem-solving.',
+            }, {
+              title: 'Growth Opportunities',
+              desc: 'Opportunities for learning, growth, and industry exposure.',
+            }].map((item) => (
               <div key={item.title} className={styles.card}>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardDescription}>{item.desc}</p>
@@ -209,22 +171,53 @@ const CareersPage = () => {
           </div>
         </section>
 
-        {/* Application Form */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Can't find the role that perfectly matches your skills?</h2>
           <h3 style={{textAlign:"center"}}>No worries! Upload your resume, and our team will review it for future opportunities.</h3>
           <div className={styles.formContainer}>
-            <form className={styles.form}>
-              <input type="text" placeholder="Full Name" className={styles.input} />
-              <input type="email" placeholder="Email Address" className={styles.input} />
-              <input type="text" placeholder="Position Applying For" className={styles.input} />
-              <textarea placeholder="Tell us about yourself" className={styles.textarea}></textarea>
-              <button className={styles.button}>Submit Application</button>
+            <form className={styles.form} onSubmit={handleSubmit} encType="multipart/form-data">
+              <input
+                type="text"
+                id="Name"
+                placeholder="Full Name"
+                className={styles.input}
+                value={formData.Name}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="email"
+                id="Email"
+                placeholder="Email Address"
+                className={styles.input}
+                value={formData.Email}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                id="Position"
+                placeholder="Position Applying For"
+                className={styles.input}
+                value={formData.Position}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="file"
+                id="Resume"
+                className={styles.input}
+                accept=".pdf,.doc,.docx"
+                onChange={handleInputChange}
+                required
+              />
+              <button type="submit" className={styles.button} disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'Submit Application'}
+              </button>
             </form>
           </div>
         </section>
 
-        {/* Footer */}
         <Footer />
       </div>
     </div>

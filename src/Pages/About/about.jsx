@@ -42,37 +42,37 @@ const About = () => {
     <div>
       <Navbar />
       <section className={styles.hero}>
-          <h1 className={styles.title}>About US</h1>
-        </section>
+        <h1 className={styles.title}>About US</h1>
+      </section>
       <div className={styles.container}>
         {/* Hero Section */}
-        
-{/*         <section className={styles.hero}>
+
+        {/*         <section className={styles.hero}>
           <h1 className={styles.title}>Our History</h1>
         </section> */}
         <h2 className={styles.teamHeading}>Our History</h2>
 
-        
+
         <section className={styles.team}>
           <p className={styles.mainText}>
-           Paradox Innovator was established on 2022 with a mission to revolutionize 
-            the consumer electronics market by developing affordable yet innovative 
-            solutions for everyday needs. Founded by a group of visionary engineers 
-            and entrepreneurs, the company set out to bridge the gap between high-end 
-            technology and budget-conscious consumers. The goal was clear: to create 
-            products that combine efficiency, affordability, and automation, 
+            Paradox Innovator was established on 2022 with a mission to revolutionize
+            the consumer electronics market by developing affordable yet innovative
+            solutions for everyday needs. Founded by a group of visionary engineers
+            and entrepreneurs, the company set out to bridge the gap between high-end
+            technology and budget-conscious consumers. The goal was clear: to create
+            products that combine efficiency, affordability, and automation,
             making advanced technology accessible to all.
           </p>
           <p className={styles.secondaryText}>
-           With a growing reputation for delivering high-quality, budget-friendly
-            technology, Paradox Innovator is now focusing on expanding its market 
-            reach and enhancing automation capabilities. The company aims to push 
-            boundaries by exploring renewable energy-based appliances, AI-driven 
-            home automation, and more cost-efficient smart devices. By staying 
-            true to its vision of innovation without financial barriers, 
+            With a growing reputation for delivering high-quality, budget-friendly
+            technology, Paradox Innovator is now focusing on expanding its market
+            reach and enhancing automation capabilities. The company aims to push
+            boundaries by exploring renewable energy-based appliances, AI-driven
+            home automation, and more cost-efficient smart devices. By staying
+            true to its vision of innovation without financial barriers,
             Paradox Innovator is set to redefine the future of affordable technology.
           </p>
-          </section>
+        </section>
 
         <h2 className={styles.teamHeading}>Our Team</h2>
         <section className={styles.team}>
@@ -87,7 +87,7 @@ const About = () => {
             projects or ideas to compete in the same or different competitions
             and life-changing innovations.
           </p>
-          </section>
+        </section>
 
         {/* Team Section */}
         <section className={styles.team}>
