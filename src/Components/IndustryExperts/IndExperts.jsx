@@ -9,12 +9,12 @@ const IndustryExperts = () => {
       profileLink: '/arpan-baul',
       image: 'https://i.postimg.cc/1fP8rFKN/arpan.jpg',
     },
-    {
-      name: 'Dr. Samiul Alam',
-      role: 'Assistant Professor',
-      profileLink: '/samiul-alam',
-      image: 'https://i.postimg.cc/Xp8pHv21/samiulll.jpg',
-    },
+    // {
+    //   name: 'Dr. Samiul Alam',
+    //   role: 'Assistant Professor',
+    //   profileLink: '/samiul-alam',
+    //   image: 'https://i.postimg.cc/Xp8pHv21/samiulll.jpg',
+    // },
   ];
 
   return (

@@ -34,6 +34,8 @@ import ContactForm from './Components/ContactForm/ContactForm';
 import ShopComponent from './Components/ShopPage/shop_page';
 import Arpan from './Pages/IndividualExp/arpan/arpan.jsx'
 import Samiul from './Pages/IndividualExp/samiul/samiul.jsx'
+import Blog from './Pages/Blog/Blog.jsx'
+import ArohiBlog from './Pages/Blog/ArohiBlog/ArohiBlog.jsx'
 
 
 
@@ -103,6 +105,8 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/shop_page" element={<ShopComponent />} />
           <Route path="/contact_form" element={<ContactForm />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/ArohiBlog" element={<ArohiBlog />} />
         </Routes>
       </div>
     </Router>

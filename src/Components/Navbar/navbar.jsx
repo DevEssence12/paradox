@@ -38,7 +38,7 @@ const Navbar = () => {
         { title: "3D Design & Manufacturing", path: "/3d-design" },
       ],
     },
-    { name: 'Blogs', path: '/earth' },
+    { name: 'Blogs', path: '/Blog' },
     
     { 
       name: 'Projects', 
