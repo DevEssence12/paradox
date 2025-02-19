@@ -8,7 +8,7 @@ body,html{
   font-family: "Arial", sans-serif;
   color: #333;
   padding: 20px;
-  background: linear-gradient(120deg, #f0f4f8, #ffffff);
+  background: linear-gradient(120deg, #f0f4f8, #c1bbbb);
 }
 
 .hero {

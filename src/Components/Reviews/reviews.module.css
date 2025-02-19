@@ -1,97 +1,236 @@
-.reviewsContainer {
+.container {
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
-  overflow: hidden;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 2rem;
-  color: #2c3e50;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Carousel styles */
 .carousel {
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  height: 200px; /* Adjust as needed */
-  overflow: hidden;
+  justify-content: center;
+  gap: 10px;
 }
 
 .reviewCard {
-  position: absolute;
-  width: 80%;
-  max-width: 400px;
+  width: 270px;
+  height: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
   background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  opacity: 0;
-  transform: scale(0.8) translateX(-50%);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
-.reviewCard.active {
-  opacity: 1;
-  transform: scale(1) translateX(0);
+.reviewImage {
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border-color: #007bff;
 }
 
-.reviewCard.inactive {
-  opacity: 0;
-  transform: scale(0.8) translateX(50%);
-}
 
-.text {
-  font-size: 1rem;
-  color: #7f8c8d;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
+/* .reviewCard:hover {
+  transform: scale(1.05);
+} */
 
-.name {
-  font-size: 1.1rem;
+
+.reviewName {
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #34495e;
+  color: #333;
 }
 
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+.reviewText {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.reviewRating {
+  color: gold;
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 .arrow {
-  background: #34495e;
-  color: white;
+  background: none;
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  font-size: 2rem;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: background 0.3s;
+  transition: color 0.3s;
 }
 
 .arrow:hover {
-  background: #2c3e50;
+  color: #007bff;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .reviewCard {
-    width: 90%;
-    padding: 1.5rem;
+.addReviewButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addReviewButton:hover {
+  background-color: #0056b3;
+}
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.9rem;
+  z-index: 999;
+}
+
+.popupContent {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.inputField, .textareaField, .selectField {
+  width: 90%;
+  margin: 5px 0;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+.buttons{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.tickImage {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.submitButton {
+  margin-top: 10px;
+  width: 150px;
+  padding: 10px 15px;
+  cursor: pointer;
+  gap: 10px;
+  background-color: #8cbbec;
+  margin: 0px 50px;
+  border-radius: 20px;
+}
+.closeButton {
+  margin-top: 10px;
+  width: 150px;
+  padding: 10px 15px;
+  cursor: pointer;
+  gap: 10px;
+  background-color: #faeee8;
+  margin: 0px 50px;
+  border-radius: 20px;
+}
+.previewImage
+{
+  height: 100px;
+  width: 100px;
+
+}
+/* Responsive Design */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .carousel {
+    flex-direction: column;
   }
 
-  .arrow {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
+  /* .reviewCard {
+    width: 80%;
+    height: auto;
+  }
+
+  .reviewImage {
+    width: 90%;
+    height: auto;
+  } */
+
+  .popupContent {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  /* .reviewCard {
+    width: 90%;
+    height: auto;
+  } */
+
+  .popupContent {
+    width: 70%;
+    padding: 15px;
+  }
+
+  .inputField, .textareaField, .selectField {
+    width: 100%;
+  }
+
+  .submitButton, .closeButton {
+    width: 120px;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .carousel {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* .reviewCard {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .reviewImage {
+    width: 100%;
+    height: auto;
+  } */
+
+  .popupContent {
+    width: 90%;
+    padding: 10px;
+  }
+  .inputField, .textareaField, .selectField {
+    width: 90%;
+  }
+
+  .submitButton, .closeButton {
+    width: auto;
+    font-size: 0.8rem;
   }
 }

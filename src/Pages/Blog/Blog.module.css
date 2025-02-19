@@ -1,0 +1,113 @@
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-top: 6rem;
+}
+
+.searchBar {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.searchIcon {
+    position: absolute;
+    right: 10px;
+    color: #888;
+    cursor: pointer;
+}
+
+.blogGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    cursor: pointer;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 0.9em;
+    margin: 0;
+    color: gray;
+}
+.backButton{
+    /* width: 100px; */
+    padding: 5rem 0.5rem ;
+    background-color:transparent;
+    /* color: rgb(0, 0, 0); */
+    /* border-radius: 60px; */
+    border-color: transparent;
+    position: fixed;
+
+}
+.backButton:hover{
+    cursor: pointer;
+}
+.blogContent{
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
+.topBar{
+    
+    padding: 0px 50px;
+}
+
+@media (max-width: 768px) {
+    .blogGrid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .searchContainer {
+        right: 10px;
+        top: 10px;
+    }
+    .backButton {
+        left: 7px;
+        top: 20px;
+        border-color: black;
+        padding: 2px;
+        border-radius: 20px;
+        margin-top: 80px;
+    }
+}
