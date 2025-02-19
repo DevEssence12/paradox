@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from "react";
 import styles from "./ArohiBlog.module.css";
+=======
+import React from 'react';
+import styles from './ArohiBlog.module.css';
+>>>>>>> 32aa23bda820c420326122594d320ef912f7ea95
 
 const ArohiBlog = () => {
   return (
     <div className={styles.container}>
+<<<<<<< HEAD
       <h1 className={styles.title}>The Future of 3D Printing</h1>
       <p className={styles.date}>February 07, 2025</p>
       <p className={styles.date}>Author: Arohi Mishra</p>
@@ -69,8 +75,22 @@ const ArohiBlog = () => {
       <p className={styles.paragraph}>
         3D printing is transforming industries and challenging traditional manufacturing processes. With its ability to create custom, intricate designs with minimal waste, it holds the promise of reshaping how products are designed, made, and distributed. As the technology continues to evolve, we can expect even more groundbreaking applications, making it an exciting time to watch this technology evolve. The future of manufacturing, healthcare, and design looks promising, with 3D printing at the helm, shaping a new era of innovation.
       </p>
+=======
+      <h1 className={styles.header}>3D Printing Blog Post</h1>
+      <div className={styles.iframeContainer}>
+        <iframe
+          className={styles.iframe}
+          src="https://arohimishra1502.blogspot.com/2025/02/3d-printing.html"
+          title="3D Printing Blog Post"
+        />
+      </div>
+>>>>>>> 32aa23bda820c420326122594d320ef912f7ea95
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default ArohiBlog;
+=======
+export default ArohiBlog;
+>>>>>>> 32aa23bda820c420326122594d320ef912f7ea95
