@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
-import React from "react";
->>>>>>> 32aa23bda820c420326122594d320ef912f7ea95
 import styles from "./Blog.module.css";
 import Footer from "../../Components/Footer/footer";
 import Navbar from "../../Components/Navbar/navbar";
 import ArohiBlog from "./ArohiBlog/ArohiBlog";
-<<<<<<< HEAD
 import { FaSearch, FaArrowLeft } from "react-icons/fa";
 
 const blogs = [
@@ -93,19 +88,4 @@ const Blog = () => {
 };
 
 export default Blog;
-=======
 
-const Blog = () => {
-    return (
-        <div>
-            <Navbar />
-            <ArohiBlog />
-            <Footer />
-        </div>
-
-
-
-    );
-};
-export default Blog;
->>>>>>> 32aa23bda820c420326122594d320ef912f7ea95
