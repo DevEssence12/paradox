@@ -21,7 +21,7 @@ const home = () => {
       <ServicesComponent />
       <AboutComponent />
       <ShopComponent />
-      <IndustryExperts /> 
+      {/* <IndustryExperts />  */}
       <Reviews />
       <SustainableGoals />
       <MediaCarousel />
