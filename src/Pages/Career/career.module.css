@@ -42,7 +42,10 @@
 }
 
 .section {
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
 .sectionTitle {
@@ -65,15 +68,16 @@
 }
 
 .card {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .cardTitle {
@@ -93,39 +97,29 @@
 }
 
 .dropdownButton {
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 18px;
   cursor: pointer;
-  background-color: #f4f4f4;
-  border: 1px solid #ccc;
+  background-color: #5a67d8;
+  color: white;
+  border: none;
   border-radius: 5px;
   width: 100%;
   text-align: left;
+  transition: background-color 0.3s;
+}
+
+.dropdownButton:hover {
+  background-color: #434190;
 }
 
 .dropdownContent {
   margin-top: 10px;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-
-.dropdownButton:hover {
-  background-color: #ddd;
-}
-
-.button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.button:hover {
-  background-color: #0056b3;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button {
@@ -176,7 +170,6 @@
   background-repeat: no-repeat;
   color: white;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-  /* border-radius: 8px; */
 }
 
 .textarea {
