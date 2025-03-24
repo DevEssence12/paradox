@@ -1,5 +1,3 @@
-/* career.module.css */
-
 .container {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #ebf4ff, #c3dafe);
@@ -22,6 +20,7 @@
   width: 500px;
   height: 500px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 .textContainer {
@@ -33,12 +32,15 @@
   font-weight: bold;
   margin-bottom: 1rem;
   color: #5a67d8;
+  animation: slideIn 1.5s ease-in-out; /* Slide in animation */
 }
 
 .heroSubtitle {
   font-size: 1.25rem;
   max-width: 600px;
   margin: 0 auto;
+  font-weight: bold; /* Make subtitle bold */
+  animation: fadeIn 2s ease-in-out; /* Fade in animation */
 }
 
 .section {
@@ -46,6 +48,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .sectionTitle {
@@ -90,6 +93,7 @@
   font-size: 1rem;
   color: #4a5568;
   margin-bottom: 1rem;
+  font-weight: bold; /* Make description bold */
 }
 
 .dropdownContainer {
@@ -172,6 +176,41 @@
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
+.openPositions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin: 1rem 0;
+}
+
+.openPositions h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5a67d8;
+}
+
+.openPositions p {
+  font-size: 1.25rem;
+  color: #4a5568;
+  font-weight: bold; /* Make paragraph bold */
+}
+
+.openPositions .applyNow {
+  font-weight: bold;
+  color: red;
+  transition: transform 0.3s ease;
+  animation: pulse 1.5s infinite;
+}
+
+.openPositions .applyNow:hover {
+  transform: scale(1.05);
+  color: #ff3737; /* Deeper red on hover */
+}
+
 .textarea {
   resize: vertical;
   min-height: 100px;
@@ -190,11 +229,13 @@
 
   .heroTitle {
     font-size: 2rem;
+    animation: slideIn 1s ease-in-out; /* Adjust animation duration */
   }
 
   .heroSubtitle {
     font-size: 1rem;
     max-width: 100%;
+    animation: fadeIn 1.5s ease-in-out; /* Adjust animation duration */
   }
 
   .grid {
@@ -204,5 +245,38 @@
   .formContainer {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .openPositions .applyNow {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -31,7 +31,8 @@ const roleDetails = {
     'Job Description: Paradox Innovator is looking for a skilled Image Processing Specialist to develop a robust algorithm for determining the diameter of jute fibers from magnified images. This role involves leveraging machine learning and computer vision techniques to create an accurate and efficient measurement solution.',
     'Key Responsibilities: Design and implement an algorithm for precise diameter estimation of jute fibers. Utilize Python and machine learning techniques for image analysis. Apply computer vision and image processing methodologies to improve measurement accuracy. Optimize and validate the algorithm for real-world application.',
     'Skills & Qualifications: Proficiency in Python and related libraries (OpenCV, NumPy, Scikit-learn, TensorFlow/PyTorch). Strong background in machine learning and computer vision. Hands-on experience in image processing techniques and feature extraction. Ability to optimize algorithms for speed and accuracy.',
-    'Why Join Us: Work on an innovative real-world problem with a direct impact. Flexible freelance role with the freedom to work remotely. Opportunity to collaborate with a team passionate about technology and innovation.'
+    'Why Join Us: Work on an innovative real-world problem with a direct impact. Flexible freelance role with the freedom to work remotely. Opportunity to collaborate with a team passionate about technology and innovation.',
+    '📢 APPLY NOW!! by sending your resume to 📩 [info@paradoxinnovator.com] 💼'
   ],
 };
 
@@ -143,7 +144,7 @@ const roles = ['Freelance Image Processing Specialist',];
                   </>
                 ) : (
                   <div className={styles.dropdownContent}>
-                    <p>{roleDetails[role]}</p>
+                    <p>{roleDetails[role]}</p> 
                   </div>
                 )}
               </div>
