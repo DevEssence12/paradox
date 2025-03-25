@@ -36,6 +36,7 @@ import Arpan from './Pages/IndividualExp/arpan/arpan.jsx'
 import Samiul from './Pages/IndividualExp/samiul/samiul.jsx'
 import Blog from './Pages/Blog/Blog.jsx'
 import ArohiBlog from './Pages/Blog/ArohiBlog/ArohiBlog.jsx'
+import NotFound from './Pages/Not Found/notfound.jsx';
 
 
 
@@ -72,6 +73,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
