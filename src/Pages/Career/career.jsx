@@ -25,15 +25,15 @@ const roleDetails = {
     'Strong written and verbal communication skills.',
     'Creative mindset with the ability to work under pressure.',
   ],
-  'Freelance Image Processing Specialist': [
-    'Role Type: Freelance',
-    'Location: Remote',
-    'Job Description: Paradox Innovator is looking for a skilled Image Processing Specialist to develop a robust algorithm for determining the diameter of jute fibers from magnified images. This role involves leveraging machine learning and computer vision techniques to create an accurate and efficient measurement solution.',
-    'Key Responsibilities: Design and implement an algorithm for precise diameter estimation of jute fibers. Utilize Python and machine learning techniques for image analysis. Apply computer vision and image processing methodologies to improve measurement accuracy. Optimize and validate the algorithm for real-world application.',
-    'Skills & Qualifications: Proficiency in Python and related libraries (OpenCV, NumPy, Scikit-learn, TensorFlow/PyTorch). Strong background in machine learning and computer vision. Hands-on experience in image processing techniques and feature extraction. Ability to optimize algorithms for speed and accuracy.',
-    'Why Join Us: Work on an innovative real-world problem with a direct impact. Flexible freelance role with the freedom to work remotely. Opportunity to collaborate with a team passionate about technology and innovation.',
-    '📢 APPLY NOW!! by sending your resume to 📩 [info@paradoxinnovator.com] 💼'
-  ],
+  // 'Freelance Image Processing Specialist': [
+  //   'Role Type: Freelance',
+  //   'Location: Remote',
+  //   'Job Description: Paradox Innovator is looking for a skilled Image Processing Specialist to develop a robust algorithm for determining the diameter of jute fibers from magnified images. This role involves leveraging machine learning and computer vision techniques to create an accurate and efficient measurement solution.',
+  //   'Key Responsibilities: Design and implement an algorithm for precise diameter estimation of jute fibers. Utilize Python and machine learning techniques for image analysis. Apply computer vision and image processing methodologies to improve measurement accuracy. Optimize and validate the algorithm for real-world application.',
+  //   'Skills & Qualifications: Proficiency in Python and related libraries (OpenCV, NumPy, Scikit-learn, TensorFlow/PyTorch). Strong background in machine learning and computer vision. Hands-on experience in image processing techniques and feature extraction. Ability to optimize algorithms for speed and accuracy.',
+  //   'Why Join Us: Work on an innovative real-world problem with a direct impact. Flexible freelance role with the freedom to work remotely. Opportunity to collaborate with a team passionate about technology and innovation.',
+  //   '📢 APPLY NOW!! by sending your resume to 📩 [info@paradoxinnovator.com] 💼'
+  // ],
 };
 
 const CareersPage = () => {
@@ -46,7 +46,7 @@ const CareersPage = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-const roles = ['Freelance Image Processing Specialist',];
+// const roles = ['Freelance Image Processing Specialist',];
 
   const handleInputChange = (e) => {
     const { id, value, files } = e.target;
@@ -86,11 +86,11 @@ const roles = ['Freelance Image Processing Specialist',];
     }
   };
 
-  const toggleDropdown = (index) => {
-    if (roles[index] !== 'No Position') {
-      setActiveDropdown(activeDropdown === index ? null : index);
-    }
-  };
+  // const toggleDropdown = (index) => {
+  //   if (roles[index] !== 'No Position') {
+  //     setActiveDropdown(activeDropdown === index ? null : index);
+  //   }
+  // };
 
   return (
     <div>
@@ -119,10 +119,10 @@ const roles = ['Freelance Image Processing Specialist',];
           </div>
         </section>
 
-        <section className={styles.section}>
+        {/* <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Open Positions</h2>
-          <div className={styles.grid}>
-            {roles.map((role, index) => (
+          <div className={styles.grid}> */}
+            {/* {roles.map((role, index) => (
               <div key={role} className={styles.dropdownContainer}>
                 {role !== 'No Position' ? (
                   <>
@@ -141,17 +141,17 @@ const roles = ['Freelance Image Processing Specialist',];
                         </ul>
                       </div>
                     )}
-                  </>
-                ) : (
+                  </> */}
+                {/* ) : (
                   <div className={styles.dropdownContent}>
                     <p>{roleDetails[role]}</p> 
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                )} */}
+              {/* </div>
+            ))} */}
+          {/* </div>
         </section>
-
+ */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Why Join Paradox Innovator?</h2>
           <div className={styles.grid}>
